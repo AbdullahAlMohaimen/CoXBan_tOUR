@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Forms.5.0.0.2012\build\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.5.0.0.2012\build\Xamarin.Forms.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B63AB6FB-5892-43C8-99F1-7CFF5B208149}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CoXBan_tOUR</RootNamespace>
+    <AssemblyName>CoXBan_tOUR</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL" />
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Core.XForms, Version=20.4451.0.54, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Xamarin.Core.20.4.0.54\lib\netstandard2.0\Syncfusion.Core.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=20.4460.0.54, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.20.4.0.54\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfComboBox.XForms, Version=20.4451.0.54, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfComboBox.20.4.0.54\lib\netstandard2.0\Syncfusion.SfComboBox.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.5.0.0.2012\lib\netstandard2.0\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.5.0.0.2012\lib\netstandard2.0\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.5.0.0.2012\lib\netstandard2.0\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForgetPassword.Designer.cs">
+      <DependentUpon>AdminForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPage.Designer.cs">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserCreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserCreateAccount.Designer.cs">
+      <DependentUpon>UserCreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForgetPassword.Designer.cs">
+      <DependentUpon>UserForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLogin.Designer.cs">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPage.Designer.cs">
+      <DependentUpon>UserPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserProfile.Designer.cs">
+      <DependentUpon>UserProfile.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserLogin.resx">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPage.resx">
+      <DependentUpon>UserPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserProfile.resx">
+      <DependentUpon>UserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="packages\Guna.UI2.WinForms.2.0.4.4\.signature.p7s" />
+    <None Include="packages\Guna.UI2.WinForms.2.0.4.4\Guna.UI2.WinForms.2.0.4.4.nupkg" />
+    <None Include="packages\Guna.UI2.WinForms.2.0.4.4\README.md" />
+    <None Include="packages\MaterialSkin.2.2.3.1\.signature.p7s" />
+    <None Include="packages\MaterialSkin.2.2.3.1\MaterialSkin.2.2.3.1.nupkg" />
+    <None Include="packages\MaterialSkin.2.2.3.1\README.md" />
+    <None Include="packages\MaterialSkinDataTable.1.0.1\.signature.p7s" />
+    <None Include="packages\MaterialSkinDataTable.1.0.1\MaterialSkinDataTable.1.0.1.nupkg" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.4\icon.png" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.4\lib\net40\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.4\lib\net45\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.4\lib\net461\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.4\lib\net48\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.4\lib\net6.0-windows7.0\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.4\lib\net7.0-windows7.0\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.4\lib\netcoreapp3.1\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.4\LICENSE.txt" />
+    <Content Include="packages\MaterialSkin.2.2.3.1\lib\net45\MaterialSkin.dll" />
+    <Content Include="packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll" />
+    <Content Include="packages\MaterialSkin.2.2.3.1\lib\net48\MaterialSkin.dll" />
+    <Content Include="packages\MaterialSkin.2.2.3.1\lib\net5.0-windows7.0\MaterialSkin.dll" />
+    <Content Include="packages\MaterialSkin.2.2.3.1\nugetIcon.png" />
+    <Content Include="packages\MaterialSkinDataTable.1.0.1\lib\net461\MaterialSkinDataTable.dll" />
+    <None Include="Resources\back1.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\secure.png" />
+    <None Include="Resources\password.png" />
+    <None Include="Resources\gmail.png" />
+    <None Include="Resources\calendarA.png" />
+    <None Include="Resources\mountains %281%29.png" />
+    <None Include="Resources\minus.png" />
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.5.0.0.2012\build\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.5.0.0.2012\build\Xamarin.Forms.props'))" />
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.5.0.0.2012\build\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.5.0.0.2012\build\Xamarin.Forms.targets'))" />
+  </Target>
+  <Import Project="..\packages\Xamarin.Forms.5.0.0.2012\build\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.5.0.0.2012\build\Xamarin.Forms.targets')" />
+</Project>
