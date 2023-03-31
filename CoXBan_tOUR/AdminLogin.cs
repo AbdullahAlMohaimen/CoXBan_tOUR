@@ -16,5 +16,10 @@ namespace CoXBan_tOUR
 		{
 			InitializeComponent();
 		}
+
+		private void AdminLogin_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
