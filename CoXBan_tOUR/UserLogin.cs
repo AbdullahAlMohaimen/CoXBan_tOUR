@@ -78,7 +78,7 @@ namespace CoXBan_tOUR
 				}
 				else
 				{
-					SqlCommand command = new SqlCommand("Select * from Customer where Customer_Email='" + email + "' and Customer_Password='" + password + "'", conn);
+					SqlCommand command = new SqlCommand("Select * from Customer where CustomerEmail='" + email + "' and CustomerPassword='" + password + "'", conn);
 					SqlDataReader dr = command.ExecuteReader();
 
 					if(dr.Read())

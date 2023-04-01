@@ -65,7 +65,7 @@ namespace CoXBan_tOUR
 				}
 				else
 				{
-					SqlCommand command = new SqlCommand("Select Customer_Name from Customer where Customer_Email='" + email + "'",conn);
+					SqlCommand command = new SqlCommand("Select CustomerName from Customer where CustomerEmail='" + email + "'",conn);
 					SqlDataReader dr = command.ExecuteReader();
 					
 					if(dr.Read())
@@ -81,7 +81,7 @@ namespace CoXBan_tOUR
 
 								try
 								{
-									SqlCommand sqlCommand = new SqlCommand("Update Customer set Customer_Password='"+password+"' where Customer_Email='"+email+"'", conn,updateTran);
+									SqlCommand sqlCommand = new SqlCommand("Update Customer set CustomerPassword='"+password+"' where CustomerEmail='"+email+"'", conn,updateTran);
 									sqlCommand.ExecuteNonQuery();
 									updateTran.Commit();
 

@@ -2,54 +2,59 @@ create database CoxBan_Tour;
 use CoxBan_Tour;
 
 create table Category(
-	Category_ID int identity(1,1) not null Primary Key,
-	Category_Name varchar(20) not null,
-	Category_Image image not null,
+	CategoryID int identity(1,1) not null Primary Key,
+	CategoryNo as ('CA' + right('1234' + cast(CategoryID as varchar(10)),10)) persisted,
+	CategoryName varchar(20) not null,
+	CategoryImage image not null,
 );
 
 
 create table Vehicle(
-	Vehicle_ID int identity(40001,1) not null Primary Key,
-	Category_ID int not null Foreign Key References Category(Category_ID),
-	Vehicle_Name varchar(50) not null,
-	Vehicle_LicenseNo varchar(50) not null,
-	Vehicle_TotalSeat int not null,
-	Vehicle_RentPrice float not null,
-	Vehicle_Status varchar(20) not null default 'Available',
-	Vehicle_Image Image not null,
+	VehicleID int identity(40001,1) not null Primary Key,
+	VehicleNo as ('VL' + right('1234' + cast(VehicleID as varchar(10)),10)) persisted,
+	CategoryID int not null Foreign Key References Category(CategoryID),
+	VehicleName varchar(50) not null,
+	VehicleLicenseNo varchar(50) not null,
+	VehicleTotalSeat int not null,
+	VehicleRentPrice float not null,
+	VehicleStatus varchar(20) not null default 'Available',
+	VehicleImage Image not null,
 );
 
 create table Resort(
-	Resort_ID int identity(50001,1) not null Primary Key,
-	Category_ID int not null Foreign Key References Category(Category_ID),
-	Resort_Name varchar(50) not null,
-	Resort_Location varchar(100) not null,
-	Resort_Quality varchar(10) not null,
-	Resort_Description varchar(255) not null,
-	Resort_ContactNumber varchar(20) not null,
-	Resort_Image Image not null,
+	ResortID int identity(50001,1) not null Primary Key,
+	ResortNo as ('RT' + right('1234' + cast(ResortID as varchar(10)),10)) persisted,
+	CategoryID int not null Foreign Key References Category(CategoryID),
+	ResortName varchar(50) not null,
+	ResortLocation varchar(100) not null,
+	ResortTotalRoom int not null,
+	ResortQuality varchar(10) not null,
+	ResortDescription varchar(255) not null,
+	ResortContactNumber varchar(20) not null,
+	ResortImage Image not null,
 );
 
 create table ResortRoom(
-	ResortRoom_ID int identity(1,1) not null Primary Key,
-	Resort_ID int not null Foreign Key References Resort(Resort_ID),
-	ResortRoom_Category varchar(20),
-	ResortRoom_Number int not null,
-	ResortRoom_Price float not null,
-	ResortRoom_FirstImage image,
-	ResortRoom_SecondImage image,
-	ResortRoom_ThirdImage image,
+	ResortRoomID int identity(1,1) not null Primary Key,
+	ResortID int not null Foreign Key References Resort(ResortID),
+	ResortRoomNo as ('RM' + right('1234' + cast(ResortID as varchar(10)),10)) persisted,
+	ResortRoomCategory varchar(20),
+	ResortRoomPrice float not null,
+	ResortRoomFirstImage image,
+	ResortRoomSecondImage image,
+	ResortRoomThirdImage image,
 );
 
 create table TouristPlace(
-	TouristPlace_ID int identity(1001,1) not null Primary Key,
-	TouristPlace_Name varchar(50) not null,
-	TouristPlace_District varchar(15) not null,
-	TouristPLace_Location varchar(100) not null,
-	TouristPlace_Description varchar(255) not null,
-	TouristPlace_FirstImage Image not null,
-	TouristPlace_SecondImage Image,
-	TouristPlace_ThirdImage Image,
+	TouristPlaceID int identity(1001,1) not null Primary Key,
+	TouristPlaceNo as ('TP' + right('1234' + cast(TouristPlaceID as varchar(10)),10)) persisted,
+	TouristPlaceName varchar(50) not null,
+	TouristPlaceDistrict varchar(15) not null,
+	TouristPLaceLocation varchar(100) not null,
+	TouristPlaceDescription varchar(255) not null,
+	TouristPlaceFirstImage Image not null,
+	TouristPlaceSecondImage Image,
+	TouristPlaceThirdImage Image,
 );
 
 create table Customer(
@@ -104,6 +109,7 @@ create table AdminNews(
 	News_Description varchar(255),
 );
 
+insert into AdminNews values();
 
 create table ContactUs(
 	Contact_ID int identity(1,1) not null Primary Key,

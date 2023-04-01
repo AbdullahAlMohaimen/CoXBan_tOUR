@@ -39,7 +39,7 @@ namespace CoXBan_tOUR
 			conn.Open();
 			try
 			{
-				SqlCommand command = new SqlCommand("select Customer_Name from Customer where Customer_Email='" + Email + "'", conn);
+				SqlCommand command = new SqlCommand("select CustomerName from Customer where CustomerEmail='" + Email + "'", conn);
 				SqlDataReader dr = command.ExecuteReader();
 
 				if (dr.Read())
