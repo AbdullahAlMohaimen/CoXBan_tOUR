@@ -73,63 +73,147 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminForgetPassword.cs">
+    <Compile Include="AddFrame\AddAdminNews.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForgetPassword.Designer.cs">
+    <Compile Include="AddFrame\AddAdminNews.Designer.cs">
+      <DependentUpon>AddAdminNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrame\AddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrame\AddCategory.Designer.cs">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrame\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrame\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrame\AddCustometStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrame\AddCustometStatus.Designer.cs">
+      <DependentUpon>AddCustometStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrame\AddResort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrame\AddResort.Designer.cs">
+      <DependentUpon>AddResort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrame\AddResortRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrame\AddResortRoom.Designer.cs">
+      <DependentUpon>AddResortRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrame\AddTouristPlace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrame\AddTouristPlace.Designer.cs">
+      <DependentUpon>AddTouristPlace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrame\AddVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrame\AddVehicle.Designer.cs">
+      <DependentUpon>AddVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminCreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminCreateAccount.Designer.cs">
+      <DependentUpon>AdminCreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminForgetPassword.Designer.cs">
       <DependentUpon>AdminForgetPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminLogin.cs">
+    <Compile Include="Admin\AdminLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminLogin.Designer.cs">
+    <Compile Include="Admin\AdminLogin.Designer.cs">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminPage.cs">
+    <Compile Include="Admin\AdminPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminPage.Designer.cs">
+    <Compile Include="Admin\AdminPage.Designer.cs">
       <DependentUpon>AdminPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminProfile.Designer.cs">
+      <DependentUpon>AdminProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\ResortBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\ResortBook.Designer.cs">
+      <DependentUpon>ResortBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\VehicleOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\VehicleOrder.Designer.cs">
+      <DependentUpon>VehicleOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\ResortPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment\ResortPayment.Designer.cs">
+      <DependentUpon>ResortPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\VehiclePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment\VehiclePayment.Designer.cs">
+      <DependentUpon>VehiclePayment.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserCreateAccount.cs">
+    <Compile Include="Customer\UserCreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserCreateAccount.Designer.cs">
+    <Compile Include="Customer\UserCreateAccount.Designer.cs">
       <DependentUpon>UserCreateAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserForgetPassword.cs">
+    <Compile Include="Customer\UserForgetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserForgetPassword.Designer.cs">
+    <Compile Include="Customer\UserForgetPassword.Designer.cs">
       <DependentUpon>UserForgetPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserLogin.cs">
+    <Compile Include="Customer\UserLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserLogin.Designer.cs">
+    <Compile Include="Customer\UserLogin.Designer.cs">
       <DependentUpon>UserLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserPage.cs">
+    <Compile Include="Customer\UserPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserPage.Designer.cs">
+    <Compile Include="Customer\UserPage.Designer.cs">
       <DependentUpon>UserPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserProfile.cs">
+    <Compile Include="Customer\UserProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserProfile.Designer.cs">
+    <Compile Include="Customer\UserProfile.Designer.cs">
       <DependentUpon>UserProfile.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminForgetPassword.resx">
+    <EmbeddedResource Include="Admin\AdminForgetPassword.resx">
       <DependentUpon>AdminForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminLogin.resx">
+    <EmbeddedResource Include="Admin\AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminPage.resx">
+    <EmbeddedResource Include="Admin\AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -142,16 +226,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserForgetPassword.resx">
+    <EmbeddedResource Include="Customer\UserForgetPassword.resx">
       <DependentUpon>UserForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserLogin.resx">
+    <EmbeddedResource Include="Customer\UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserPage.resx">
+    <EmbeddedResource Include="Customer\UserPage.resx">
       <DependentUpon>UserPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserProfile.resx">
+    <EmbeddedResource Include="Customer\UserProfile.resx">
       <DependentUpon>UserProfile.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -206,6 +290,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Class\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
