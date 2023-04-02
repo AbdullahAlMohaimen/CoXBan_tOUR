@@ -62,6 +62,12 @@ namespace CoXBan_tOUR
 						ap.Show();
 						this.Hide();
 					}
+					else
+					{
+						MessageBox.Show("Admin not found\nPlease try again and enter a correct email and password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+						txt_Email.Clear();
+						txt_Password.Clear();
+					}
 				}
 			}
 			catch

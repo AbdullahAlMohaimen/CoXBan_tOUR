@@ -30,11 +30,11 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserPage));
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.txt_Date = new System.Windows.Forms.Label();
-			this.userCombobox = new Guna.UI2.WinForms.Guna2ComboBox();
 			this.Minimize = new System.Windows.Forms.Button();
+			this.txt_Date = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
 			this.Exit = new System.Windows.Forms.Button();
+			this.userCombobox = new Guna.UI2.WinForms.Guna2ComboBox();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -50,6 +50,21 @@
 			this.panel1.Size = new System.Drawing.Size(1054, 32);
 			this.panel1.TabIndex = 0;
 			// 
+			// Minimize
+			// 
+			this.Minimize.BackColor = System.Drawing.Color.SeaGreen;
+			this.Minimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Minimize.BackgroundImage")));
+			this.Minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.Minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Minimize.FlatAppearance.BorderSize = 0;
+			this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Minimize.Location = new System.Drawing.Point(992, 4);
+			this.Minimize.Name = "Minimize";
+			this.Minimize.Size = new System.Drawing.Size(24, 24);
+			this.Minimize.TabIndex = 9;
+			this.Minimize.UseVisualStyleBackColor = false;
+			this.Minimize.Click += new System.EventHandler(this.button2_Click);
+			// 
 			// txt_Date
 			// 
 			this.txt_Date.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -59,6 +74,35 @@
 			this.txt_Date.Size = new System.Drawing.Size(100, 23);
 			this.txt_Date.TabIndex = 8;
 			this.txt_Date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.SeaGreen;
+			this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.button1.FlatAppearance.BorderSize = 0;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Location = new System.Drawing.Point(4, 4);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(24, 24);
+			this.button1.TabIndex = 7;
+			this.button1.UseVisualStyleBackColor = false;
+			// 
+			// Exit
+			// 
+			this.Exit.BackColor = System.Drawing.Color.SeaGreen;
+			this.Exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Exit.BackgroundImage")));
+			this.Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Exit.FlatAppearance.BorderSize = 0;
+			this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Exit.Location = new System.Drawing.Point(1025, 4);
+			this.Exit.Name = "Exit";
+			this.Exit.Size = new System.Drawing.Size(24, 24);
+			this.Exit.TabIndex = 3;
+			this.Exit.UseVisualStyleBackColor = false;
+			this.Exit.Click += new System.EventHandler(this.Exit_Click);
 			// 
 			// userCombobox
 			// 
@@ -89,50 +133,6 @@
 			this.userCombobox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
 			this.userCombobox.TabIndex = 4;
 			this.userCombobox.SelectedIndexChanged += new System.EventHandler(this.userCombobox_SelectedIndexChanged);
-			// 
-			// Minimize
-			// 
-			this.Minimize.BackColor = System.Drawing.Color.SeaGreen;
-			this.Minimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Minimize.BackgroundImage")));
-			this.Minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.Minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.Minimize.FlatAppearance.BorderSize = 0;
-			this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.Minimize.Location = new System.Drawing.Point(992, 4);
-			this.Minimize.Name = "Minimize";
-			this.Minimize.Size = new System.Drawing.Size(24, 24);
-			this.Minimize.TabIndex = 9;
-			this.Minimize.UseVisualStyleBackColor = false;
-			this.Minimize.Click += new System.EventHandler(this.button2_Click);
-			// 
-			// button1
-			// 
-			this.button1.BackColor = System.Drawing.Color.SeaGreen;
-			this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.button1.FlatAppearance.BorderSize = 0;
-			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1.Location = new System.Drawing.Point(4, 4);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(24, 24);
-			this.button1.TabIndex = 7;
-			this.button1.UseVisualStyleBackColor = false;
-			// 
-			// Exit
-			// 
-			this.Exit.BackColor = System.Drawing.Color.SeaGreen;
-			this.Exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Exit.BackgroundImage")));
-			this.Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.Exit.FlatAppearance.BorderSize = 0;
-			this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.Exit.Location = new System.Drawing.Point(1025, 4);
-			this.Exit.Name = "Exit";
-			this.Exit.Size = new System.Drawing.Size(24, 24);
-			this.Exit.TabIndex = 3;
-			this.Exit.UseVisualStyleBackColor = false;
-			this.Exit.Click += new System.EventHandler(this.Exit_Click);
 			// 
 			// UserPage
 			// 

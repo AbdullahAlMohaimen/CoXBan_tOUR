@@ -29,8 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.txt_Date = new System.Windows.Forms.Label();
 			this.button2 = new System.Windows.Forms.Button();
+			this.txt_Date = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
 			this.Minimize = new System.Windows.Forms.Button();
 			this.Exit = new System.Windows.Forms.Button();
@@ -60,16 +60,6 @@
 			this.panel1.Size = new System.Drawing.Size(362, 32);
 			this.panel1.TabIndex = 5;
 			// 
-			// txt_Date
-			// 
-			this.txt_Date.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txt_Date.ForeColor = System.Drawing.Color.Maroon;
-			this.txt_Date.Location = new System.Drawing.Point(36, 4);
-			this.txt_Date.Name = "txt_Date";
-			this.txt_Date.Size = new System.Drawing.Size(100, 23);
-			this.txt_Date.TabIndex = 6;
-			this.txt_Date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
 			// button2
 			// 
 			this.button2.BackColor = System.Drawing.Color.NavajoWhite;
@@ -83,6 +73,17 @@
 			this.button2.Size = new System.Drawing.Size(24, 24);
 			this.button2.TabIndex = 7;
 			this.button2.UseVisualStyleBackColor = false;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
+			// 
+			// txt_Date
+			// 
+			this.txt_Date.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txt_Date.ForeColor = System.Drawing.Color.Maroon;
+			this.txt_Date.Location = new System.Drawing.Point(36, 4);
+			this.txt_Date.Name = "txt_Date";
+			this.txt_Date.Size = new System.Drawing.Size(100, 23);
+			this.txt_Date.TabIndex = 6;
+			this.txt_Date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// button1
 			// 
@@ -111,6 +112,7 @@
 			this.Minimize.Size = new System.Drawing.Size(24, 24);
 			this.Minimize.TabIndex = 3;
 			this.Minimize.UseVisualStyleBackColor = false;
+			this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
 			// 
 			// Exit
 			// 
@@ -125,6 +127,7 @@
 			this.Exit.Size = new System.Drawing.Size(24, 24);
 			this.Exit.TabIndex = 2;
 			this.Exit.UseVisualStyleBackColor = false;
+			this.Exit.Click += new System.EventHandler(this.Exit_Click);
 			// 
 			// goToAdminPage
 			// 
@@ -326,6 +329,7 @@
 			this.UserForgetPass.Text = "Recover Password";
 			this.UserForgetPass.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			this.UserForgetPass.UseVisualStyleBackColor = false;
+			this.UserForgetPass.Click += new System.EventHandler(this.UserForgetPass_Click);
 			// 
 			// label4
 			// 
@@ -361,6 +365,7 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "AdminForgetPassword";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Load += new System.EventHandler(this.AdminForgetPassword_Load);
 			this.panel1.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
