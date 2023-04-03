@@ -129,6 +129,60 @@
     <Compile Include="AddFrame\AddVehicle.Designer.cs">
       <DependentUpon>AddVehicle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AdminController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminController.Designer.cs">
+      <DependentUpon>AdminController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\NewsController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\NewsController.Designer.cs">
+      <DependentUpon>NewsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ResortController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\ResortController.Designer.cs">
+      <DependentUpon>ResortController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ResortRoomController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\ResortRoomController.Designer.cs">
+      <DependentUpon>ResortRoomController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SettingController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\SettingController.Designer.cs">
+      <DependentUpon>SettingController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TouristPlaceController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\TouristPlaceController.Designer.cs">
+      <DependentUpon>TouristPlaceController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\VehicleController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\VehicleController.Designer.cs">
+      <DependentUpon>VehicleController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CategoryController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\CategoryController.Designer.cs">
+      <DependentUpon>CategoryController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CustomerController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\CustomerController.Designer.cs">
+      <DependentUpon>CustomerController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AdminCreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +212,12 @@
     </Compile>
     <Compile Include="Admin\AdminProfile.Designer.cs">
       <DependentUpon>AdminProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HomeController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\HomeController.Designer.cs">
+      <DependentUpon>HomeController.cs</DependentUpon>
     </Compile>
     <Compile Include="Order\ResortBook.cs">
       <SubType>Form</SubType>
@@ -215,6 +275,36 @@
     <Compile Include="Customer\UserProfile.Designer.cs">
       <DependentUpon>UserProfile.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin\AdminController.resx">
+      <DependentUpon>AdminController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\HomeController.resx">
+      <DependentUpon>HomeController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\NewsController.resx">
+      <DependentUpon>NewsController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ResortController.resx">
+      <DependentUpon>ResortController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ResortRoomController.resx">
+      <DependentUpon>ResortRoomController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\SettingController.resx">
+      <DependentUpon>SettingController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\TouristPlaceController.resx">
+      <DependentUpon>TouristPlaceController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\VehicleController.resx">
+      <DependentUpon>VehicleController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\CategoryController.resx">
+      <DependentUpon>CategoryController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\CustomerController.resx">
+      <DependentUpon>CustomerController.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminForgetPassword.resx">
       <DependentUpon>AdminForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -285,6 +375,16 @@
     <Content Include="packages\MaterialSkin.2.2.3.1\lib\net5.0-windows7.0\MaterialSkin.dll" />
     <Content Include="packages\MaterialSkin.2.2.3.1\nugetIcon.png" />
     <Content Include="packages\MaterialSkinDataTable.1.0.1\lib\net461\MaterialSkinDataTable.dll" />
+    <None Include="Resources\customer.png" />
+    <None Include="Resources\gear.png" />
+    <None Include="Resources\admin.png" />
+    <None Include="Resources\news-report.png" />
+    <None Include="Resources\map.png" />
+    <None Include="Resources\carB.png" />
+    <None Include="Resources\resort.png" />
+    <None Include="Resources\menu.png" />
+    <None Include="Resources\carA.png" />
+    <None Include="Resources\home.png" />
     <None Include="Resources\back1.png" />
     <None Include="Resources\back.png" />
     <None Include="Resources\login.png" />
@@ -299,6 +399,7 @@
   <ItemGroup>
     <Folder Include="Class\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="UserControl\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using CoXBan_tOUR.Admin;
+using CoXBan_tOUR.Admin.Add;
 
 namespace CoXBan_tOUR
 {
@@ -18,6 +20,8 @@ namespace CoXBan_tOUR
 		public AdminPage()
 		{
 			InitializeComponent();
+			HomeController homeController = new HomeController();
+			AddUserControl(homeController);
 		}
 
 
@@ -29,6 +33,14 @@ namespace CoXBan_tOUR
 			set { AdminEmail = value; }
 		}
 
+		//UserControl
+		public void AddUserControl(UserControl userControl)
+		{
+			userControl.Dock = DockStyle.Fill;
+			panelContainer.Controls.Clear();
+			panelContainer.Controls.Add(userControl);
+			userControl.BringToFront();
+		}
 		private void AdminPage_Load(object sender, EventArgs e)
 		{
 			DateTime dateTime = DateTime.UtcNow.Date;
@@ -84,6 +96,67 @@ namespace CoXBan_tOUR
 				alp.Show();
 				this.Hide();
 			}
+		}
+
+		private void Home_Click(object sender, EventArgs e)
+		{
+			HomeController homeController = new HomeController();
+			AddUserControl(homeController);
+
+		}
+
+		private void Category_Click(object sender, EventArgs e)
+		{
+			CategoryController categoryController = new CategoryController();
+			AddUserControl(categoryController);
+		}
+
+		private void Vehicle_Click(object sender, EventArgs e)
+		{
+			VehicleController vehicleController = new VehicleController();
+			AddUserControl(vehicleController);
+		}
+
+		private void Resort_Click(object sender, EventArgs e)
+		{
+			ResortController resortController = new ResortController();
+			AddUserControl(resortController);
+		}
+
+		private void ResortRoom_Click(object sender, EventArgs e)
+		{
+			ResortRoomController resortRoomController = new ResortRoomController();
+			AddUserControl(resortRoomController);
+		}
+
+		private void TouristPlace_Click(object sender, EventArgs e)
+		{
+			TouristPlaceController touristPlaceController = new TouristPlaceController();
+			AddUserControl(touristPlaceController);
+		}
+
+		private void News_Click(object sender, EventArgs e)
+		{
+			NewsController newsController = new NewsController();
+			AddUserControl(newsController);
+		}
+
+		private void Admin_Click(object sender, EventArgs e)
+		{
+			AdminController adminController = new AdminController();
+			AddUserControl(adminController);
+		}
+
+		private void Customer_Click(object sender, EventArgs e)
+		{
+			CustomerController customerController = new CustomerController();
+			AddUserControl(customerController);
+		}
+
+		private void Setting_Click(object sender, EventArgs e)
+		{
+			SettingController settingController = new SettingController();
+			AddUserControl(settingController);
 		}
 	}
 }
