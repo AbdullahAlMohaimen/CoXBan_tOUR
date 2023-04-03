@@ -47,6 +47,7 @@
 			this.Minimize = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
 			this.Exit = new System.Windows.Forms.Button();
+			this.label1 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.guna2ShadowPanel1.SuspendLayout();
 			this.SuspendLayout();
@@ -54,6 +55,7 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.SeaGreen;
+			this.panel1.Controls.Add(this.label1);
 			this.panel1.Controls.Add(this.Minimize);
 			this.panel1.Controls.Add(this.txt_Date);
 			this.panel1.Controls.Add(this.button1);
@@ -446,6 +448,17 @@
 			this.Exit.UseVisualStyleBackColor = false;
 			this.Exit.Click += new System.EventHandler(this.Exit_Click);
 			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Algerian", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.label1.Location = new System.Drawing.Point(479, 0);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(244, 36);
+			this.label1.TabIndex = 10;
+			this.label1.Text = "CoxBan Tour";
+			// 
 			// AdminPage
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -462,6 +475,7 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Load += new System.EventHandler(this.AdminPage_Load);
 			this.panel1.ResumeLayout(false);
+			this.panel1.PerformLayout();
 			this.guna2ShadowPanel1.ResumeLayout(false);
 			this.ResumeLayout(false);
 
@@ -487,5 +501,6 @@
 		private Guna.UI2.WinForms.Guna2GradientButton Admin;
 		private Guna.UI2.WinForms.Guna2GradientButton Setting;
 		private Guna.UI2.WinForms.Guna2GradientButton Customer;
+		private System.Windows.Forms.Label label1;
 	}
 }
