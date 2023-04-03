@@ -47,7 +47,7 @@
 			this.panel1.Controls.Add(this.Exit);
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(1054, 32);
+			this.panel1.Size = new System.Drawing.Size(1100, 32);
 			this.panel1.TabIndex = 0;
 			// 
 			// Minimize
@@ -58,7 +58,7 @@
 			this.Minimize.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.Minimize.FlatAppearance.BorderSize = 0;
 			this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.Minimize.Location = new System.Drawing.Point(992, 4);
+			this.Minimize.Location = new System.Drawing.Point(1034, 4);
 			this.Minimize.Name = "Minimize";
 			this.Minimize.Size = new System.Drawing.Size(24, 24);
 			this.Minimize.TabIndex = 9;
@@ -97,7 +97,7 @@
 			this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.Exit.FlatAppearance.BorderSize = 0;
 			this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.Exit.Location = new System.Drawing.Point(1025, 4);
+			this.Exit.Location = new System.Drawing.Point(1068, 4);
 			this.Exit.Name = "Exit";
 			this.Exit.Size = new System.Drawing.Size(24, 24);
 			this.Exit.TabIndex = 3;
@@ -140,7 +140,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Moccasin;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.ClientSize = new System.Drawing.Size(1054, 584);
+			this.ClientSize = new System.Drawing.Size(1098, 584);
 			this.ControlBox = false;
 			this.Controls.Add(this.userCombobox);
 			this.Controls.Add(this.panel1);

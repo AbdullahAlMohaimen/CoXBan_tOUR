@@ -16,7 +16,7 @@ namespace CoXBan_tOUR
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new UserLoginPage());
+			Application.Run(new AdminPage());
 		}
 	}
 }

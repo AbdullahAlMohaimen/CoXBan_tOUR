@@ -30,6 +30,9 @@
 		{
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.txt_Date = new System.Windows.Forms.Label();
+			this.button1 = new System.Windows.Forms.Button();
+			this.Minimize = new System.Windows.Forms.Button();
+			this.Exit = new System.Windows.Forms.Button();
 			this.title = new System.Windows.Forms.Label();
 			this.txt_Email = new MaterialSkin.Controls.MaterialMaskedTextBox();
 			this.txt_Password = new MaterialSkin.Controls.MaterialMaskedTextBox();
@@ -40,9 +43,6 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.goToAdminPage = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
-			this.Minimize = new System.Windows.Forms.Button();
-			this.Exit = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -67,6 +67,51 @@
 			this.txt_Date.Size = new System.Drawing.Size(100, 23);
 			this.txt_Date.TabIndex = 6;
 			this.txt_Date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.NavajoWhite;
+			this.button1.BackgroundImage = global::CoXBan_tOUR.Properties.Resources.calendarA;
+			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.button1.FlatAppearance.BorderSize = 0;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Location = new System.Drawing.Point(4, 4);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(24, 24);
+			this.button1.TabIndex = 4;
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
+			// Minimize
+			// 
+			this.Minimize.BackColor = System.Drawing.Color.NavajoWhite;
+			this.Minimize.BackgroundImage = global::CoXBan_tOUR.Properties.Resources.minus;
+			this.Minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.Minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Minimize.FlatAppearance.BorderSize = 0;
+			this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Minimize.Location = new System.Drawing.Point(302, 4);
+			this.Minimize.Name = "Minimize";
+			this.Minimize.Size = new System.Drawing.Size(24, 24);
+			this.Minimize.TabIndex = 3;
+			this.Minimize.UseVisualStyleBackColor = false;
+			this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
+			// 
+			// Exit
+			// 
+			this.Exit.BackColor = System.Drawing.Color.NavajoWhite;
+			this.Exit.BackgroundImage = global::CoXBan_tOUR.Properties.Resources.close;
+			this.Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Exit.FlatAppearance.BorderSize = 0;
+			this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Exit.Location = new System.Drawing.Point(334, 3);
+			this.Exit.Name = "Exit";
+			this.Exit.Size = new System.Drawing.Size(24, 24);
+			this.Exit.TabIndex = 2;
+			this.Exit.UseVisualStyleBackColor = false;
+			this.Exit.Click += new System.EventHandler(this.Exit_Click);
 			// 
 			// title
 			// 
@@ -260,51 +305,6 @@
 			this.goToAdminPage.TabIndex = 4;
 			this.goToAdminPage.UseMnemonic = false;
 			this.goToAdminPage.Click += new System.EventHandler(this.goToAdminPage_Click);
-			// 
-			// button1
-			// 
-			this.button1.BackColor = System.Drawing.Color.NavajoWhite;
-			this.button1.BackgroundImage = global::CoXBan_tOUR.Properties.Resources.calendarA;
-			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.button1.FlatAppearance.BorderSize = 0;
-			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1.Location = new System.Drawing.Point(4, 4);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(24, 24);
-			this.button1.TabIndex = 4;
-			this.button1.UseVisualStyleBackColor = false;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
-			// 
-			// Minimize
-			// 
-			this.Minimize.BackColor = System.Drawing.Color.NavajoWhite;
-			this.Minimize.BackgroundImage = global::CoXBan_tOUR.Properties.Resources.minus;
-			this.Minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.Minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.Minimize.FlatAppearance.BorderSize = 0;
-			this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.Minimize.Location = new System.Drawing.Point(302, 4);
-			this.Minimize.Name = "Minimize";
-			this.Minimize.Size = new System.Drawing.Size(24, 24);
-			this.Minimize.TabIndex = 3;
-			this.Minimize.UseVisualStyleBackColor = false;
-			this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
-			// 
-			// Exit
-			// 
-			this.Exit.BackColor = System.Drawing.Color.NavajoWhite;
-			this.Exit.BackgroundImage = global::CoXBan_tOUR.Properties.Resources.close;
-			this.Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.Exit.FlatAppearance.BorderSize = 0;
-			this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.Exit.Location = new System.Drawing.Point(334, 3);
-			this.Exit.Name = "Exit";
-			this.Exit.Size = new System.Drawing.Size(24, 24);
-			this.Exit.TabIndex = 2;
-			this.Exit.UseVisualStyleBackColor = false;
-			this.Exit.Click += new System.EventHandler(this.Exit_Click);
 			// 
 			// UserLoginPage
 			// 
