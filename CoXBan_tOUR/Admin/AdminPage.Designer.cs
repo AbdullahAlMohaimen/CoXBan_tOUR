@@ -30,10 +30,13 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPage));
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.label1 = new System.Windows.Forms.Label();
+			this.Minimize = new System.Windows.Forms.Button();
 			this.txt_Date = new System.Windows.Forms.Label();
+			this.button1 = new System.Windows.Forms.Button();
+			this.Exit = new System.Windows.Forms.Button();
 			this.adminCombobox = new Guna.UI2.WinForms.Guna2ComboBox();
 			this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-			this.panelContainer = new Guna.UI2.WinForms.Guna2Panel();
 			this.Customer = new Guna.UI2.WinForms.Guna2GradientButton();
 			this.Setting = new Guna.UI2.WinForms.Guna2GradientButton();
 			this.Admin = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -44,10 +47,7 @@
 			this.Vehicle = new Guna.UI2.WinForms.Guna2GradientButton();
 			this.Category = new Guna.UI2.WinForms.Guna2GradientButton();
 			this.Home = new Guna.UI2.WinForms.Guna2GradientButton();
-			this.Minimize = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
-			this.Exit = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
+			this.panelContainer = new Guna.UI2.WinForms.Guna2Panel();
 			this.panel1.SuspendLayout();
 			this.guna2ShadowPanel1.SuspendLayout();
 			this.SuspendLayout();
@@ -65,6 +65,32 @@
 			this.panel1.Size = new System.Drawing.Size(1120, 32);
 			this.panel1.TabIndex = 1;
 			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Algerian", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.label1.Location = new System.Drawing.Point(479, 0);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(244, 36);
+			this.label1.TabIndex = 10;
+			this.label1.Text = "CoxBan Tour";
+			// 
+			// Minimize
+			// 
+			this.Minimize.BackColor = System.Drawing.Color.SeaGreen;
+			this.Minimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Minimize.BackgroundImage")));
+			this.Minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.Minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Minimize.FlatAppearance.BorderSize = 0;
+			this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Minimize.Location = new System.Drawing.Point(1054, 4);
+			this.Minimize.Name = "Minimize";
+			this.Minimize.Size = new System.Drawing.Size(24, 24);
+			this.Minimize.TabIndex = 9;
+			this.Minimize.UseVisualStyleBackColor = false;
+			this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
+			// 
 			// txt_Date
 			// 
 			this.txt_Date.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -74,6 +100,35 @@
 			this.txt_Date.Size = new System.Drawing.Size(100, 23);
 			this.txt_Date.TabIndex = 8;
 			this.txt_Date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.SeaGreen;
+			this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.button1.FlatAppearance.BorderSize = 0;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Location = new System.Drawing.Point(4, 4);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(24, 24);
+			this.button1.TabIndex = 7;
+			this.button1.UseVisualStyleBackColor = false;
+			// 
+			// Exit
+			// 
+			this.Exit.BackColor = System.Drawing.Color.SeaGreen;
+			this.Exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Exit.BackgroundImage")));
+			this.Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Exit.FlatAppearance.BorderSize = 0;
+			this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Exit.Location = new System.Drawing.Point(1088, 4);
+			this.Exit.Name = "Exit";
+			this.Exit.Size = new System.Drawing.Size(24, 24);
+			this.Exit.TabIndex = 3;
+			this.Exit.UseVisualStyleBackColor = false;
+			this.Exit.Click += new System.EventHandler(this.Exit_Click);
 			// 
 			// adminCombobox
 			// 
@@ -126,13 +181,6 @@
 			this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
 			this.guna2ShadowPanel1.Size = new System.Drawing.Size(231, 553);
 			this.guna2ShadowPanel1.TabIndex = 3;
-			// 
-			// panelContainer
-			// 
-			this.panelContainer.Location = new System.Drawing.Point(231, 32);
-			this.panelContainer.Name = "panelContainer";
-			this.panelContainer.Size = new System.Drawing.Size(886, 552);
-			this.panelContainer.TabIndex = 4;
 			// 
 			// Customer
 			// 
@@ -404,60 +452,13 @@
 			this.Home.Text = "Home";
 			this.Home.Click += new System.EventHandler(this.Home_Click);
 			// 
-			// Minimize
+			// panelContainer
 			// 
-			this.Minimize.BackColor = System.Drawing.Color.SeaGreen;
-			this.Minimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Minimize.BackgroundImage")));
-			this.Minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.Minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.Minimize.FlatAppearance.BorderSize = 0;
-			this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.Minimize.Location = new System.Drawing.Point(1054, 4);
-			this.Minimize.Name = "Minimize";
-			this.Minimize.Size = new System.Drawing.Size(24, 24);
-			this.Minimize.TabIndex = 9;
-			this.Minimize.UseVisualStyleBackColor = false;
-			this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
-			// 
-			// button1
-			// 
-			this.button1.BackColor = System.Drawing.Color.SeaGreen;
-			this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.button1.FlatAppearance.BorderSize = 0;
-			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1.Location = new System.Drawing.Point(4, 4);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(24, 24);
-			this.button1.TabIndex = 7;
-			this.button1.UseVisualStyleBackColor = false;
-			// 
-			// Exit
-			// 
-			this.Exit.BackColor = System.Drawing.Color.SeaGreen;
-			this.Exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Exit.BackgroundImage")));
-			this.Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.Exit.FlatAppearance.BorderSize = 0;
-			this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.Exit.Location = new System.Drawing.Point(1088, 4);
-			this.Exit.Name = "Exit";
-			this.Exit.Size = new System.Drawing.Size(24, 24);
-			this.Exit.TabIndex = 3;
-			this.Exit.UseVisualStyleBackColor = false;
-			this.Exit.Click += new System.EventHandler(this.Exit_Click);
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Algerian", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.label1.Location = new System.Drawing.Point(479, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(244, 36);
-			this.label1.TabIndex = 10;
-			this.label1.Text = "CoxBan Tour";
+			this.panelContainer.Location = new System.Drawing.Point(231, 32);
+			this.panelContainer.Name = "panelContainer";
+			this.panelContainer.Size = new System.Drawing.Size(886, 552);
+			this.panelContainer.TabIndex = 4;
+			this.panelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContainer_Paint);
 			// 
 			// AdminPage
 			// 

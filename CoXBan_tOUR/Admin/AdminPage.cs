@@ -20,8 +20,12 @@ namespace CoXBan_tOUR
 		public AdminPage()
 		{
 			InitializeComponent();
-			HomeController homeController = new HomeController();
-			AddUserControl(homeController);
+
+			//HomeController homeController = new HomeController();
+			//AddUserControl(homeController);
+
+			CategoryController categoryController = new CategoryController();
+			AddUserControl(categoryController);
 		}
 
 
@@ -157,6 +161,11 @@ namespace CoXBan_tOUR
 		{
 			SettingController settingController = new SettingController();
 			AddUserControl(settingController);
+		}
+
+		private void panelContainer_Paint(object sender, PaintEventArgs e)
+		{
+
 		}
 	}
 }

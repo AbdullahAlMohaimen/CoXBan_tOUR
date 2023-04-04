@@ -8,6 +8,7 @@ create table Category(
 	CategoryImage image not null,
 );
 
+select * from Category;
 
 create table Vehicle(
 	VehicleID int identity(1,1) not null Primary Key,
