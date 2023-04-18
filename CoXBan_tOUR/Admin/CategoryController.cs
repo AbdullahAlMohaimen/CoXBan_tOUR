@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace CoXBan_tOUR.Admin.Add
 {
@@ -50,18 +49,6 @@ namespace CoXBan_tOUR.Admin.Add
 
 		}
 
-		
-		private void ImageUploadButton_Click(object sender, EventArgs e)
-		{
-			OpenFileDialog opnfd = new OpenFileDialog();
-			opnfd.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
-			if (opnfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-			{
-				CategoryImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-				CategoryImage.Image = Image.FromFile(opnfd.FileName);
-				this.CategoryImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			}
-		}
 
 		private void AddCategory_Click(object sender, EventArgs e)
 		{
@@ -255,6 +242,23 @@ namespace CoXBan_tOUR.Admin.Add
 			{
 				conn.Close() ;
 			}
+		}
+
+		private void CategoryImage_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog opnfd = new OpenFileDialog();
+			opnfd.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
+			if (opnfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+			{
+				CategoryImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+				CategoryImage.Image = Image.FromFile(opnfd.FileName);
+				this.CategoryImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			}
+		}
+
+		private void categoryRefresh_Click(object sender, EventArgs e)
+		{
+			getAllCategory();
 		}
 	}
 }

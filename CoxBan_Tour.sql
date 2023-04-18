@@ -10,6 +10,8 @@ create table Category(
 
 select * from Category;
 
+Select CategoryName,VehicleName,CategoryNo,VehicleNo,VDistrict,VehicleTotalSeat,VehicleRentPrice from Category c join Vehicle v on c.CategoryID=v.CategoryID
+Select CategoryName from Category
 create table Vehicle(
 	VehicleID int identity(1,1) not null Primary Key,
 	VehicleNo as ('VL' + right('1234' + cast(VehicleID as varchar(10)),10)) persisted,
