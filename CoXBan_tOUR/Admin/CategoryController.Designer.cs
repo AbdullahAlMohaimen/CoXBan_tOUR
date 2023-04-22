@@ -28,12 +28,12 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
@@ -48,6 +48,7 @@
 			this.Search = new Guna.UI2.WinForms.Guna2CircleButton();
 			this.CategoryImage = new System.Windows.Forms.PictureBox();
 			this.categoryRefresh = new Guna.UI2.WinForms.Guna2CircleButton();
+			this.category = new Guna.UI2.WinForms.Guna2ComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.allCategoryList)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.allList)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.CategoryImage)).BeginInit();
@@ -56,9 +57,9 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.SeaGreen;
-			this.panel1.Location = new System.Drawing.Point(0, 242);
+			this.panel1.Location = new System.Drawing.Point(0, 276);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(974, 2);
+			this.panel1.Size = new System.Drawing.Size(1032, 2);
 			this.panel1.TabIndex = 0;
 			// 
 			// label1
@@ -88,7 +89,7 @@
 			this.txt_CategoryName.AnimateReadOnly = false;
 			this.txt_CategoryName.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.txt_CategoryName.Depth = 0;
-			this.txt_CategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			this.txt_CategoryName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
 			this.txt_CategoryName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 			this.txt_CategoryName.LeadingIcon = null;
 			this.txt_CategoryName.Location = new System.Drawing.Point(23, 69);
@@ -119,7 +120,7 @@
 			this.AddCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.AddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.AddCategory.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.AddCategory.Location = new System.Drawing.Point(150, 177);
+			this.AddCategory.Location = new System.Drawing.Point(150, 199);
 			this.AddCategory.Name = "AddCategory";
 			this.AddCategory.Size = new System.Drawing.Size(173, 27);
 			this.AddCategory.TabIndex = 22;
@@ -129,33 +130,33 @@
 			// 
 			// allCategoryList
 			// 
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-			this.allCategoryList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+			this.allCategoryList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
 			this.allCategoryList.BackgroundColor = System.Drawing.Color.Moccasin;
 			this.allCategoryList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.allCategoryList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Moccasin;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.allCategoryList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Moccasin;
+			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.allCategoryList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
 			this.allCategoryList.ColumnHeadersHeight = 28;
 			this.allCategoryList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
 			this.allCategoryList.Cursor = System.Windows.Forms.Cursors.Hand;
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Tai Le", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.CadetBlue;
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.allCategoryList.DefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Tai Le", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.CadetBlue;
+			dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.allCategoryList.DefaultCellStyle = dataGridViewCellStyle9;
 			this.allCategoryList.EnableHeadersVisualStyles = true;
 			this.allCategoryList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-			this.allCategoryList.Location = new System.Drawing.Point(348, 32);
+			this.allCategoryList.Location = new System.Drawing.Point(349, 32);
 			this.allCategoryList.Name = "allCategoryList";
 			this.allCategoryList.ReadOnly = true;
 			this.allCategoryList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -163,7 +164,7 @@
 			this.allCategoryList.RowHeadersWidth = 40;
 			this.allCategoryList.RowTemplate.Height = 28;
 			this.allCategoryList.RowTemplate.ReadOnly = true;
-			this.allCategoryList.Size = new System.Drawing.Size(604, 204);
+			this.allCategoryList.Size = new System.Drawing.Size(659, 227);
 			this.allCategoryList.TabIndex = 30;
 			this.allCategoryList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
 			this.allCategoryList.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -198,33 +199,33 @@
 			// 
 			// allList
 			// 
-			dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-			this.allList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+			this.allList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
 			this.allList.BackgroundColor = System.Drawing.Color.Moccasin;
 			this.allList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.allList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
-			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Moccasin;
-			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.allList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Moccasin;
+			dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.allList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
 			this.allList.ColumnHeadersHeight = 28;
 			this.allList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
 			this.allList.Cursor = System.Windows.Forms.Cursors.Hand;
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Tai Le", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.CadetBlue;
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.allList.DefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Tai Le", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.CadetBlue;
+			dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.allList.DefaultCellStyle = dataGridViewCellStyle12;
 			this.allList.EnableHeadersVisualStyles = true;
 			this.allList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-			this.allList.Location = new System.Drawing.Point(23, 287);
+			this.allList.Location = new System.Drawing.Point(24, 328);
 			this.allList.Name = "allList";
 			this.allList.ReadOnly = true;
 			this.allList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -232,7 +233,7 @@
 			this.allList.RowHeadersWidth = 40;
 			this.allList.RowTemplate.Height = 28;
 			this.allList.RowTemplate.ReadOnly = true;
-			this.allList.Size = new System.Drawing.Size(929, 323);
+			this.allList.Size = new System.Drawing.Size(984, 335);
 			this.allList.TabIndex = 32;
 			this.allList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
 			this.allList.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -263,7 +264,7 @@
 			this.UpdateCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.UpdateCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.UpdateCategory.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.UpdateCategory.Location = new System.Drawing.Point(150, 209);
+			this.UpdateCategory.Location = new System.Drawing.Point(150, 232);
 			this.UpdateCategory.Name = "UpdateCategory";
 			this.UpdateCategory.Size = new System.Drawing.Size(173, 27);
 			this.UpdateCategory.TabIndex = 33;
@@ -287,7 +288,7 @@
 			this.txt_CategorySearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_CategorySearch.ForeColor = System.Drawing.Color.Black;
 			this.txt_CategorySearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-			this.txt_CategorySearch.Location = new System.Drawing.Point(740, 247);
+			this.txt_CategorySearch.Location = new System.Drawing.Point(792, 285);
 			this.txt_CategorySearch.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
 			this.txt_CategorySearch.Name = "txt_CategorySearch";
 			this.txt_CategorySearch.PasswordChar = '\0';
@@ -309,7 +310,7 @@
 			this.Search.ForeColor = System.Drawing.Color.White;
 			this.Search.Image = global::CoXBan_tOUR.Properties.Resources.transparency;
 			this.Search.ImageSize = new System.Drawing.Size(30, 30);
-			this.Search.Location = new System.Drawing.Point(914, 250);
+			this.Search.Location = new System.Drawing.Point(962, 290);
 			this.Search.Name = "Search";
 			this.Search.PressedColor = System.Drawing.Color.Moccasin;
 			this.Search.ShadowDecoration.Color = System.Drawing.Color.Moccasin;
@@ -324,7 +325,7 @@
 			this.CategoryImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.CategoryImage.Location = new System.Drawing.Point(24, 146);
 			this.CategoryImage.Name = "CategoryImage";
-			this.CategoryImage.Size = new System.Drawing.Size(90, 90);
+			this.CategoryImage.Size = new System.Drawing.Size(113, 113);
 			this.CategoryImage.TabIndex = 21;
 			this.CategoryImage.TabStop = false;
 			this.CategoryImage.Click += new System.EventHandler(this.CategoryImage_Click);
@@ -341,7 +342,7 @@
 			this.categoryRefresh.ForeColor = System.Drawing.Color.White;
 			this.categoryRefresh.Image = global::CoXBan_tOUR.Properties.Resources.refresh;
 			this.categoryRefresh.ImageSize = new System.Drawing.Size(30, 30);
-			this.categoryRefresh.Location = new System.Drawing.Point(24, 253);
+			this.categoryRefresh.Location = new System.Drawing.Point(24, 290);
 			this.categoryRefresh.Name = "categoryRefresh";
 			this.categoryRefresh.PressedColor = System.Drawing.Color.Moccasin;
 			this.categoryRefresh.ShadowDecoration.Color = System.Drawing.Color.Moccasin;
@@ -350,11 +351,43 @@
 			this.categoryRefresh.TabIndex = 37;
 			this.categoryRefresh.Click += new System.EventHandler(this.categoryRefresh_Click);
 			// 
+			// category
+			// 
+			this.category.BackColor = System.Drawing.Color.Moccasin;
+			this.category.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.category.BorderRadius = 8;
+			this.category.BorderThickness = 0;
+			this.category.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.category.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.category.DropDownHeight = 150;
+			this.category.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.category.DropDownWidth = 120;
+			this.category.FillColor = System.Drawing.Color.Moccasin;
+			this.category.FocusedColor = System.Drawing.Color.Empty;
+			this.category.FocusedState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.category.FocusedState.ForeColor = System.Drawing.Color.Black;
+			this.category.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.category.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.category.HoverState.FillColor = System.Drawing.Color.Brown;
+			this.category.HoverState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
+			this.category.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.category.IntegralHeight = false;
+			this.category.ItemHeight = 28;
+			this.category.Location = new System.Drawing.Point(565, 287);
+			this.category.MaxDropDownItems = 5;
+			this.category.Name = "category";
+			this.category.ShadowDecoration.Color = System.Drawing.Color.Gray;
+			this.category.Size = new System.Drawing.Size(219, 34);
+			this.category.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+			this.category.TabIndex = 72;
+			this.category.SelectedIndexChanged += new System.EventHandler(this.category_SelectedIndexChanged);
+			// 
 			// CategoryController
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Moccasin;
+			this.Controls.Add(this.category);
 			this.Controls.Add(this.categoryRefresh);
 			this.Controls.Add(this.Search);
 			this.Controls.Add(this.txt_CategorySearch);
@@ -370,7 +403,7 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.panel1);
 			this.Name = "CategoryController";
-			this.Size = new System.Drawing.Size(974, 628);
+			this.Size = new System.Drawing.Size(1032, 678);
 			this.Load += new System.EventHandler(this.CategoryController_Load);
 			((System.ComponentModel.ISupportInitialize)(this.allCategoryList)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.allList)).EndInit();
@@ -396,5 +429,6 @@
 		private Guna.UI2.WinForms.Guna2TextBox txt_CategorySearch;
 		private Guna.UI2.WinForms.Guna2CircleButton Search;
 		private Guna.UI2.WinForms.Guna2CircleButton categoryRefresh;
+		private Guna.UI2.WinForms.Guna2ComboBox category;
 	}
 }

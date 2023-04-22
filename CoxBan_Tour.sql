@@ -1,3 +1,4 @@
+drop database CoxBan_Tour;
 create database CoxBan_Tour;
 use CoxBan_Tour;
 
@@ -5,13 +6,14 @@ create table Category(
 	CategoryID int identity(1,1) not null Primary Key,
 	CategoryNo as ('CA' + right('1234' + cast(CategoryID as varchar(10)),10)) persisted,
 	CategoryName varchar(20) not null,
-	CategoryImage image not null,
+	CategoryImage image null,
 );
-
+insert into Category(CategoryName) values('Bus');
 select * from Category;
 
 Select CategoryName,VehicleName,CategoryNo,VehicleNo,VDistrict,VehicleTotalSeat,VehicleRentPrice from Category c join Vehicle v on c.CategoryID=v.CategoryID
 Select CategoryName from Category
+
 create table Vehicle(
 	VehicleID int identity(1,1) not null Primary Key,
 	VehicleNo as ('VL' + right('1234' + cast(VehicleID as varchar(10)),10)) persisted,
@@ -22,7 +24,7 @@ create table Vehicle(
 	VehicleTotalSeat int not null,
 	VehicleRentPrice float not null,
 	VehicleStatus varchar(20) not null default 'Available',
-	VehicleImage Image not null,
+	VehicleImage Image null,
 );
 
 create table Resort(
@@ -33,11 +35,14 @@ create table Resort(
 	RDistrict varchar(20) not null,
 	ResortLocation varchar(100) not null,
 	ResortTotalRoom int not null,
-	ResortQuality varchar(10) not null,
+	ResortQuality varchar(50) not null,
 	ResortDescription varchar(255) not null,
 	ResortContactNumber varchar(20) not null,
-	ResortImage Image not null,
+	ResortImage Image null,
 );
+
+select * from Resort;
+
 
 create table ResortRoom(
 	ResortRoomID int identity(1,1) not null Primary Key,
@@ -45,9 +50,9 @@ create table ResortRoom(
 	ResortRoomNo as ('RM' + right('1234' + cast(ResortID as varchar(10)),10)) persisted,
 	ResortRoomCategory varchar(20),
 	ResortRoomPrice float not null,
-	ResortRoomFirstImage image,
-	ResortRoomSecondImage image,
-	ResortRoomThirdImage image,
+	ResortRoomFirstImage image null,
+	ResortRoomSecondImage image null,
+	ResortRoomThirdImage image null,
 );
 
 create table TouristPlace(
@@ -57,9 +62,9 @@ create table TouristPlace(
 	TouristPlaceDistrict varchar(15) not null,
 	TouristPLaceLocation varchar(100) not null,
 	TouristPlaceDescription varchar(255) not null,
-	TouristPlaceFirstImage Image not null,
-	TouristPlaceSecondImage Image,
-	TouristPlaceThirdImage Image,
+	TouristPlaceFirstImage Image null,
+	TouristPlaceSecondImage Image null,
+	TouristPlaceThirdImage Image null,
 );
 
 create table Customer(
@@ -73,7 +78,7 @@ create table Customer(
 	CustomerEmail varchar(50) not null,
 	CustomerPhoneNo varchar(20) not null,
 	CustomerPassword varchar(50) not null,
-	CustomerImage image,
+	CustomerImage image null,
 );
 
 insert into Customer(CustomerName,CustomerGender,CustomerReligion,CustomerNationalID,CustomerAddress,CustomerEmail,CustomerPhoneNo,CustomerPassword,CustomerImage)
@@ -94,7 +99,7 @@ create table Admin(
 	AdminEmail varchar(50) not null,
 	AdminPhoneNo varchar(20) not null,
 	AdminPassword varchar(50) not null,
-	AdminImage image,
+	AdminImage image null,
 );
 
 insert into Admin(AdminName,AdminGender,AdminReligion,AdminDOB,AdminNationalID,AdminPresentAddress,AdminPermanentAddress,AdminEMail,AdminPhoneNo,AdminPassword,AdminImage)
@@ -118,7 +123,7 @@ create table AdminNews(
 	AdminID int not null Foreign Key References Admin(AdminID),
 	NewsDate date not null,
 	NewsTime time not null,
-	NewsImage image not null,
+	NewsImage image null,
 	NewsDescription varchar(255),
 );
 
@@ -187,3 +192,5 @@ create table ResortPayment(
 	rPaymentDue float,
 	rPaymentStatus float,
 );
+
+Select CategoryName from Category where CategoryName not like '%Resort%' and CategoryName not like '%Hotel%' and CategoryName not like '%Cottage%';

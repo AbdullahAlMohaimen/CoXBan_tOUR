@@ -19,6 +19,7 @@ namespace CoXBan_tOUR.Admin.Add
 			InitializeComponent();
 			getCategoryName();
 			getAllVehicle();
+			vehicleCategory();
 		}
 
 		private void VehicleController_Load(object sender, EventArgs e)
@@ -34,7 +35,7 @@ namespace CoXBan_tOUR.Admin.Add
 
 			try
 			{
-				SqlCommand command = new SqlCommand("Select CategoryName from Category", conn);
+				SqlCommand command = new SqlCommand("Select CategoryName from Category where CategoryName not like '%Resort%' and CategoryName not like '%Hotel%' and CategoryName not like '%Cottage%'", conn);
 				SqlDataReader dr = command.ExecuteReader();
 
 				while (dr.Read())
@@ -48,6 +49,26 @@ namespace CoXBan_tOUR.Admin.Add
 			}
 		}
 
+		public void vehicleCategory()
+		{
+			SqlConnection conn = new SqlConnection(connectionString);
+			conn.Open();
+			try
+			{
+				SqlCommand command = new SqlCommand("Select CategoryName from Category where CategoryName not like '%Resort%' and CategoryName not like '%Hotel%' and CategoryName not like '%Cottage%'", conn);
+				SqlDataReader dr = command.ExecuteReader();
+
+				while(dr.Read())
+				{
+					vehiclecategory.Items.Add(dr[0].ToString());
+				}
+			}
+			catch
+			{
+				MessageBox.Show("Vehicle Category not found","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+			}
+		}
+
 		public void getAllVehicle()
 		{
 			SqlConnection conn = new SqlConnection(connectionString);
@@ -55,7 +76,7 @@ namespace CoXBan_tOUR.Admin.Add
 
 			try
 			{
-				SqlCommand command = new SqlCommand("Select VehicleID as ID,VehicleName as Name,CategoryName as Category,VDistrict as District,VehicleTotalSeat as TotalSeat,VehicleRentPrice as RentPrice from Vehicle v join Category c on v.CategoryID=c.CategoryID", conn);
+				SqlCommand command = new SqlCommand("Select VehicleID as ID,VehicleName as Name,CategoryName as Category,VDistrict as District,VehicleTotalSeat as TotalSeat,VehicleRentPrice as RentPrice,VehicleStatus as Status from Vehicle v join Category c on v.CategoryID=c.CategoryID", conn);
 				SqlDataAdapter sda = new SqlDataAdapter(command);
 				DataTable vehicleTable= new DataTable();
 				sda.Fill(vehicleTable);
@@ -109,7 +130,7 @@ namespace CoXBan_tOUR.Admin.Add
 					vImage = vehicleImage.Image;
 					conn.Open();
 
-					if(vehicleName == "" || vehicleDistrict == "" || vehicleLicenseNo == "" || vehicleStatus == "" || vehicleTotalSeat == null || vehicleRentPrice == null)
+					if(vehicleName == null || vehicleDistrict == null || vehicleLicenseNo == null || vehicleStatus == null || vehicleTotalSeat == 0 || vehicleRentPrice == 0.0)
 					{
 						MessageBox.Show("Please Insert all the field...!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 					}
@@ -170,7 +191,7 @@ namespace CoXBan_tOUR.Admin.Add
 
 			try
 			{
-				SqlCommand command = new SqlCommand("Select VehicleID as ID,VehicleName as Name,CategoryName as Category,VDistrict as District,VehicleTotalSeat as TotalSeat,VehicleRentPrice as RentPrice from Vehicle v join Category c on v.CategoryID=c.CategoryID where CategoryName='"+searchText+"'", conn);
+				SqlCommand command = new SqlCommand("Select VehicleID as ID,VehicleName as Name,CategoryName as Category,VDistrict as District,VehicleTotalSeat as TotalSeat,VehicleRentPrice as RentPrice,VehicleStatus as Status from Vehicle v join Category c on v.CategoryID=c.CategoryID where CategoryName='" + searchText+"'", conn);
 				SqlDataAdapter sda = new SqlDataAdapter(command);
 				DataTable dt = new DataTable();
 				sda.Fill(dt);
@@ -178,7 +199,7 @@ namespace CoXBan_tOUR.Admin.Add
 			}
 			catch
 			{
-
+				MessageBox.Show($"{searchText}??\nDo not found any data!!","Not Found",MessageBoxButtons.OK,MessageBoxIcon.Warning);
 			}
 			finally
 			{
@@ -189,6 +210,54 @@ namespace CoXBan_tOUR.Admin.Add
 		private void guna2CircleButton1_Click(object sender, EventArgs e)
 		{
 			getAllVehicle();
+		}
+
+		private void vehiclecategory_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection conn = new SqlConnection(connectionString);
+			conn.Open();
+
+			string categoryName = vehiclecategory.SelectedItem.ToString();
+
+			try
+			{
+				SqlCommand command = new SqlCommand("Select VehicleID as ID,VehicleName as Name,CategoryName as Category,VDistrict as District,VehicleTotalSeat as TotalSeat,VehicleRentPrice as RentPrice,VehicleStatus as Status from Vehicle v join Category c on v.CategoryID=c.CategoryID where CategoryName='" + categoryName + "'", conn);
+				SqlDataAdapter sda = new SqlDataAdapter(command);
+				DataTable dt = new DataTable();
+				sda.Fill(dt);
+				allVehicleList.DataSource = dt;
+			}
+			catch
+			{
+				MessageBox.Show($"{categoryName} ??\nData not found", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+			}
+		}
+
+		private void txt_VehicleSearch_TextChanged(object sender, EventArgs e)
+		{
+			SqlConnection conn = new SqlConnection(connectionString);
+			conn.Open();
+
+			string searchText = txt_VehicleSearch.Text;
+			
+			
+			try
+			{
+				SqlCommand command = new SqlCommand("Select VehicleID as ID,VehicleName as Name,CategoryName as Category,VDistrict as District,VehicleTotalSeat as TotalSeat,VehicleRentPrice as RentPrice, VehicleStatus as Status from Vehicle v join Category c on v.CategoryID=c.CategoryID where VehicleName like '%" + searchText+ "%' or VDistrict like '%"+searchText+ "%' or VehicleStatus like '%"+searchText+ "%' or VehicleTotalSeat like '%"+(int)Convert.ToInt32(searchText)+ "%' or VehicleRentPrice like '%"+(float)Convert.ToDecimal(searchText)+"%'", conn);
+				SqlDataAdapter sda = new SqlDataAdapter(command);
+				DataTable dt = new DataTable();
+				sda.Fill(dt);
+				allVehicleList.DataSource = dt;
+			}
+			catch
+			{
+				getAllVehicle();
+				//MessageBox.Show($"{searchText}??\nDo not found any data!!", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			}
+			finally
+			{
+				conn.Close();
+			}
 		}
 	}
 }

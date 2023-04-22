@@ -56,6 +56,7 @@
 			this.vehicleSearch = new Guna.UI2.WinForms.Guna2CircleButton();
 			this.vehicleImage = new System.Windows.Forms.PictureBox();
 			this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+			this.vehiclecategory = new Guna.UI2.WinForms.Guna2ComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.allVehicleList)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.vehicleImage)).BeginInit();
 			this.SuspendLayout();
@@ -63,9 +64,9 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.SeaGreen;
-			this.panel1.Location = new System.Drawing.Point(0, 242);
+			this.panel1.Location = new System.Drawing.Point(0, 276);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(974, 2);
+			this.panel1.Size = new System.Drawing.Size(1032, 2);
 			this.panel1.TabIndex = 1;
 			// 
 			// label1
@@ -103,15 +104,16 @@
 			this.txt_LicenseNumber.AnimateReadOnly = false;
 			this.txt_LicenseNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.txt_LicenseNumber.Depth = 0;
-			this.txt_LicenseNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			this.txt_LicenseNumber.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
 			this.txt_LicenseNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.txt_LicenseNumber.Hint = "Vehicle License Number";
 			this.txt_LicenseNumber.LeadingIcon = null;
 			this.txt_LicenseNumber.Location = new System.Drawing.Point(23, 146);
 			this.txt_LicenseNumber.MaxLength = 50;
 			this.txt_LicenseNumber.MouseState = MaterialSkin.MouseState.OUT;
 			this.txt_LicenseNumber.Multiline = false;
 			this.txt_LicenseNumber.Name = "txt_LicenseNumber";
-			this.txt_LicenseNumber.Size = new System.Drawing.Size(200, 50);
+			this.txt_LicenseNumber.Size = new System.Drawing.Size(230, 50);
 			this.txt_LicenseNumber.TabIndex = 34;
 			this.txt_LicenseNumber.Text = "";
 			this.txt_LicenseNumber.TrailingIcon = null;
@@ -147,7 +149,7 @@
 			this.txt_categoryName.MaxDropDownItems = 4;
 			this.txt_categoryName.MouseState = MaterialSkin.MouseState.OUT;
 			this.txt_categoryName.Name = "txt_categoryName";
-			this.txt_categoryName.Size = new System.Drawing.Size(200, 49);
+			this.txt_categoryName.Size = new System.Drawing.Size(230, 49);
 			this.txt_categoryName.StartIndex = 0;
 			this.txt_categoryName.TabIndex = 38;
 			// 
@@ -156,7 +158,7 @@
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.label4.Location = new System.Drawing.Point(260, 44);
+			this.label4.Location = new System.Drawing.Point(272, 44);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(118, 21);
 			this.label4.TabIndex = 40;
@@ -167,15 +169,16 @@
 			this.txt_VehicleName.AnimateReadOnly = false;
 			this.txt_VehicleName.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.txt_VehicleName.Depth = 0;
-			this.txt_VehicleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			this.txt_VehicleName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
 			this.txt_VehicleName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.txt_VehicleName.Hint = "Enter Vehicle Name";
 			this.txt_VehicleName.LeadingIcon = null;
-			this.txt_VehicleName.Location = new System.Drawing.Point(264, 68);
+			this.txt_VehicleName.Location = new System.Drawing.Point(276, 68);
 			this.txt_VehicleName.MaxLength = 50;
 			this.txt_VehicleName.MouseState = MaterialSkin.MouseState.OUT;
 			this.txt_VehicleName.Multiline = false;
 			this.txt_VehicleName.Name = "txt_VehicleName";
-			this.txt_VehicleName.Size = new System.Drawing.Size(200, 50);
+			this.txt_VehicleName.Size = new System.Drawing.Size(230, 50);
 			this.txt_VehicleName.TabIndex = 39;
 			this.txt_VehicleName.Text = "";
 			this.txt_VehicleName.TrailingIcon = null;
@@ -185,7 +188,7 @@
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.label5.Location = new System.Drawing.Point(260, 121);
+			this.label5.Location = new System.Drawing.Point(272, 121);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(100, 21);
 			this.label5.TabIndex = 42;
@@ -196,17 +199,18 @@
 			this.txt_RentPrice.AnimateReadOnly = false;
 			this.txt_RentPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.txt_RentPrice.Depth = 0;
-			this.txt_RentPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			this.txt_RentPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
 			this.txt_RentPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.txt_RentPrice.Hint = "Enter Rent Price";
 			this.txt_RentPrice.LeadingIcon = null;
-			this.txt_RentPrice.Location = new System.Drawing.Point(264, 145);
+			this.txt_RentPrice.Location = new System.Drawing.Point(276, 146);
 			this.txt_RentPrice.MaxLength = 50;
 			this.txt_RentPrice.MouseState = MaterialSkin.MouseState.OUT;
 			this.txt_RentPrice.Multiline = false;
 			this.txt_RentPrice.Name = "txt_RentPrice";
-			this.txt_RentPrice.Size = new System.Drawing.Size(200, 50);
+			this.txt_RentPrice.Size = new System.Drawing.Size(230, 50);
 			this.txt_RentPrice.TabIndex = 41;
-			this.txt_RentPrice.Text = "";
+			this.txt_RentPrice.Text = "0.0";
 			this.txt_RentPrice.TrailingIcon = null;
 			// 
 			// label6
@@ -214,7 +218,7 @@
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.label6.Location = new System.Drawing.Point(503, 45);
+			this.label6.Location = new System.Drawing.Point(524, 45);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(82, 21);
 			this.label6.TabIndex = 44;
@@ -225,7 +229,7 @@
 			this.label7.AutoSize = true;
 			this.label7.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.label7.Location = new System.Drawing.Point(503, 122);
+			this.label7.Location = new System.Drawing.Point(524, 121);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(64, 21);
 			this.label7.TabIndex = 46;
@@ -236,7 +240,7 @@
 			this.label8.AutoSize = true;
 			this.label8.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.label8.Location = new System.Drawing.Point(744, 45);
+			this.label8.Location = new System.Drawing.Point(774, 45);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(100, 21);
 			this.label8.TabIndex = 48;
@@ -247,17 +251,18 @@
 			this.txt_TotalSeat.AnimateReadOnly = false;
 			this.txt_TotalSeat.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.txt_TotalSeat.Depth = 0;
-			this.txt_TotalSeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			this.txt_TotalSeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
 			this.txt_TotalSeat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.txt_TotalSeat.Hint = "Enter Total Seat";
 			this.txt_TotalSeat.LeadingIcon = null;
-			this.txt_TotalSeat.Location = new System.Drawing.Point(748, 69);
+			this.txt_TotalSeat.Location = new System.Drawing.Point(778, 69);
 			this.txt_TotalSeat.MaxLength = 50;
 			this.txt_TotalSeat.MouseState = MaterialSkin.MouseState.OUT;
 			this.txt_TotalSeat.Multiline = false;
 			this.txt_TotalSeat.Name = "txt_TotalSeat";
-			this.txt_TotalSeat.Size = new System.Drawing.Size(200, 50);
+			this.txt_TotalSeat.Size = new System.Drawing.Size(230, 50);
 			this.txt_TotalSeat.TabIndex = 47;
-			this.txt_TotalSeat.Text = "";
+			this.txt_TotalSeat.Text = "0";
 			this.txt_TotalSeat.TrailingIcon = null;
 			// 
 			// label9
@@ -265,7 +270,7 @@
 			this.label9.AutoSize = true;
 			this.label9.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.label9.Location = new System.Drawing.Point(783, 121);
+			this.label9.Location = new System.Drawing.Point(831, 122);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(127, 21);
 			this.label9.TabIndex = 49;
@@ -290,11 +295,11 @@
             "Available",
             "Booked",
             "On Rent"});
-			this.txt_VehicleStatus.Location = new System.Drawing.Point(507, 147);
+			this.txt_VehicleStatus.Location = new System.Drawing.Point(528, 146);
 			this.txt_VehicleStatus.MaxDropDownItems = 4;
 			this.txt_VehicleStatus.MouseState = MaterialSkin.MouseState.OUT;
 			this.txt_VehicleStatus.Name = "txt_VehicleStatus";
-			this.txt_VehicleStatus.Size = new System.Drawing.Size(200, 49);
+			this.txt_VehicleStatus.Size = new System.Drawing.Size(230, 49);
 			this.txt_VehicleStatus.StartIndex = 0;
 			this.txt_VehicleStatus.TabIndex = 50;
 			// 
@@ -378,11 +383,11 @@
             "Meherpur                           ",
             "Narail                             ",
             "Satkhira"});
-			this.txt_VehicleDIstrict.Location = new System.Drawing.Point(507, 68);
+			this.txt_VehicleDIstrict.Location = new System.Drawing.Point(528, 69);
 			this.txt_VehicleDIstrict.MaxDropDownItems = 4;
 			this.txt_VehicleDIstrict.MouseState = MaterialSkin.MouseState.OUT;
 			this.txt_VehicleDIstrict.Name = "txt_VehicleDIstrict";
-			this.txt_VehicleDIstrict.Size = new System.Drawing.Size(200, 49);
+			this.txt_VehicleDIstrict.Size = new System.Drawing.Size(230, 49);
 			this.txt_VehicleDIstrict.StartIndex = 0;
 			this.txt_VehicleDIstrict.TabIndex = 51;
 			// 
@@ -393,9 +398,9 @@
 			this.UpdateCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.UpdateCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.UpdateCategory.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.UpdateCategory.Location = new System.Drawing.Point(264, 209);
+			this.UpdateCategory.Location = new System.Drawing.Point(290, 225);
 			this.UpdateCategory.Name = "UpdateCategory";
-			this.UpdateCategory.Size = new System.Drawing.Size(200, 27);
+			this.UpdateCategory.Size = new System.Drawing.Size(200, 36);
 			this.UpdateCategory.TabIndex = 54;
 			this.UpdateCategory.Text = "Update Vehicle";
 			this.UpdateCategory.UseVisualStyleBackColor = false;
@@ -407,9 +412,9 @@
 			this.AddVehicle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.AddVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.AddVehicle.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.AddVehicle.Location = new System.Drawing.Point(507, 209);
+			this.AddVehicle.Location = new System.Drawing.Point(545, 225);
 			this.AddVehicle.Name = "AddVehicle";
-			this.AddVehicle.Size = new System.Drawing.Size(200, 27);
+			this.AddVehicle.Size = new System.Drawing.Size(200, 36);
 			this.AddVehicle.TabIndex = 53;
 			this.AddVehicle.Text = "Add Vehicle";
 			this.AddVehicle.UseVisualStyleBackColor = false;
@@ -432,7 +437,7 @@
 			this.txt_VehicleSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_VehicleSearch.ForeColor = System.Drawing.Color.Black;
 			this.txt_VehicleSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-			this.txt_VehicleSearch.Location = new System.Drawing.Point(740, 247);
+			this.txt_VehicleSearch.Location = new System.Drawing.Point(792, 285);
 			this.txt_VehicleSearch.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
 			this.txt_VehicleSearch.Name = "txt_VehicleSearch";
 			this.txt_VehicleSearch.PasswordChar = '\0';
@@ -441,6 +446,7 @@
 			this.txt_VehicleSearch.Size = new System.Drawing.Size(162, 36);
 			this.txt_VehicleSearch.TabIndex = 56;
 			this.txt_VehicleSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.txt_VehicleSearch.TextChanged += new System.EventHandler(this.txt_VehicleSearch_TextChanged);
 			// 
 			// allVehicleList
 			// 
@@ -470,7 +476,7 @@
 			this.allVehicleList.DefaultCellStyle = dataGridViewCellStyle6;
 			this.allVehicleList.EnableHeadersVisualStyles = true;
 			this.allVehicleList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-			this.allVehicleList.Location = new System.Drawing.Point(23, 287);
+			this.allVehicleList.Location = new System.Drawing.Point(24, 328);
 			this.allVehicleList.Name = "allVehicleList";
 			this.allVehicleList.ReadOnly = true;
 			this.allVehicleList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -478,7 +484,7 @@
 			this.allVehicleList.RowHeadersWidth = 40;
 			this.allVehicleList.RowTemplate.Height = 28;
 			this.allVehicleList.RowTemplate.ReadOnly = true;
-			this.allVehicleList.Size = new System.Drawing.Size(929, 323);
+			this.allVehicleList.Size = new System.Drawing.Size(984, 335);
 			this.allVehicleList.TabIndex = 55;
 			this.allVehicleList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
 			this.allVehicleList.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -514,7 +520,7 @@
 			this.vehicleSearch.ForeColor = System.Drawing.Color.White;
 			this.vehicleSearch.Image = global::CoXBan_tOUR.Properties.Resources.transparency;
 			this.vehicleSearch.ImageSize = new System.Drawing.Size(30, 30);
-			this.vehicleSearch.Location = new System.Drawing.Point(914, 250);
+			this.vehicleSearch.Location = new System.Drawing.Point(962, 290);
 			this.vehicleSearch.Name = "vehicleSearch";
 			this.vehicleSearch.PressedColor = System.Drawing.Color.Moccasin;
 			this.vehicleSearch.ShadowDecoration.Color = System.Drawing.Color.Moccasin;
@@ -527,9 +533,9 @@
 			// 
 			this.vehicleImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.vehicleImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.vehicleImage.Location = new System.Drawing.Point(801, 145);
+			this.vehicleImage.Location = new System.Drawing.Point(832, 146);
 			this.vehicleImage.Name = "vehicleImage";
-			this.vehicleImage.Size = new System.Drawing.Size(90, 90);
+			this.vehicleImage.Size = new System.Drawing.Size(124, 124);
 			this.vehicleImage.TabIndex = 36;
 			this.vehicleImage.TabStop = false;
 			this.vehicleImage.Click += new System.EventHandler(this.vehicleImage_Click);
@@ -546,7 +552,7 @@
 			this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
 			this.guna2CircleButton1.Image = global::CoXBan_tOUR.Properties.Resources.refresh;
 			this.guna2CircleButton1.ImageSize = new System.Drawing.Size(30, 30);
-			this.guna2CircleButton1.Location = new System.Drawing.Point(24, 253);
+			this.guna2CircleButton1.Location = new System.Drawing.Point(24, 290);
 			this.guna2CircleButton1.Name = "guna2CircleButton1";
 			this.guna2CircleButton1.PressedColor = System.Drawing.Color.Moccasin;
 			this.guna2CircleButton1.ShadowDecoration.Color = System.Drawing.Color.Moccasin;
@@ -555,11 +561,43 @@
 			this.guna2CircleButton1.TabIndex = 58;
 			this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
 			// 
+			// vehiclecategory
+			// 
+			this.vehiclecategory.BackColor = System.Drawing.Color.Moccasin;
+			this.vehiclecategory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.vehiclecategory.BorderRadius = 8;
+			this.vehiclecategory.BorderThickness = 0;
+			this.vehiclecategory.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.vehiclecategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.vehiclecategory.DropDownHeight = 150;
+			this.vehiclecategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.vehiclecategory.DropDownWidth = 120;
+			this.vehiclecategory.FillColor = System.Drawing.Color.Moccasin;
+			this.vehiclecategory.FocusedColor = System.Drawing.Color.Empty;
+			this.vehiclecategory.FocusedState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.vehiclecategory.FocusedState.ForeColor = System.Drawing.Color.Black;
+			this.vehiclecategory.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.vehiclecategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.vehiclecategory.HoverState.FillColor = System.Drawing.Color.Brown;
+			this.vehiclecategory.HoverState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
+			this.vehiclecategory.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.vehiclecategory.IntegralHeight = false;
+			this.vehiclecategory.ItemHeight = 28;
+			this.vehiclecategory.Location = new System.Drawing.Point(565, 287);
+			this.vehiclecategory.MaxDropDownItems = 5;
+			this.vehiclecategory.Name = "vehiclecategory";
+			this.vehiclecategory.ShadowDecoration.Color = System.Drawing.Color.Gray;
+			this.vehiclecategory.Size = new System.Drawing.Size(219, 34);
+			this.vehiclecategory.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+			this.vehiclecategory.TabIndex = 59;
+			this.vehiclecategory.SelectedIndexChanged += new System.EventHandler(this.vehiclecategory_SelectedIndexChanged);
+			// 
 			// VehicleController
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Moccasin;
+			this.Controls.Add(this.vehiclecategory);
 			this.Controls.Add(this.guna2CircleButton1);
 			this.Controls.Add(this.vehicleSearch);
 			this.Controls.Add(this.txt_VehicleSearch);
@@ -586,7 +624,7 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.panel1);
 			this.Name = "VehicleController";
-			this.Size = new System.Drawing.Size(974, 628);
+			this.Size = new System.Drawing.Size(1032, 678);
 			this.Load += new System.EventHandler(this.VehicleController_Load);
 			((System.ComponentModel.ISupportInitialize)(this.allVehicleList)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.vehicleImage)).EndInit();
@@ -622,5 +660,6 @@
 		private Guna.UI2.WinForms.Guna2TextBox txt_VehicleSearch;
 		private Guna.UI2.WinForms.Guna2DataGridView allVehicleList;
 		private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+		private Guna.UI2.WinForms.Guna2ComboBox vehiclecategory;
 	}
 }

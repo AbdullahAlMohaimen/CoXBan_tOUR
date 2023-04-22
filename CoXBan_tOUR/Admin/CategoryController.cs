@@ -21,6 +21,7 @@ namespace CoXBan_tOUR.Admin.Add
 
 			//defined
 			getAllCategory();
+			resortCategory();
 		}
 
 		public void getAllCategory()
@@ -44,6 +45,28 @@ namespace CoXBan_tOUR.Admin.Add
 				conn.Close();
 			}
 		}
+
+
+		public void resortCategory()
+		{
+			SqlConnection conn = new SqlConnection(connectionString);
+			conn.Open();
+			try
+			{
+				SqlCommand command = new SqlCommand("Select CategoryName from Category", conn);
+				SqlDataReader dr = command.ExecuteReader();
+
+				while (dr.Read())
+				{
+					category.Items.Add(dr[0].ToString());
+				}
+			}
+			catch
+			{
+				MessageBox.Show("Vehicle Category not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
 		private void CategoryController_Load(object sender, EventArgs e)
 		{
 
@@ -259,6 +282,27 @@ namespace CoXBan_tOUR.Admin.Add
 		private void categoryRefresh_Click(object sender, EventArgs e)
 		{
 			getAllCategory();
+		}
+
+		private void category_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection conn = new SqlConnection(connectionString);
+			conn.Open();
+
+			string categoryName = category.SelectedItem.ToString();
+
+			try
+			{
+				SqlCommand command = new SqlCommand("Select ResortID as ID,ResortName as Name,CategoryName as Category,RDistrict as District,ResortTotalRoom as TotalRoom,ResortLocation as Location,ResortContactNumber as Number from Resort r join Category c on r.CategoryID=c.CategoryID where CategoryName='" + categoryName + "'", conn);
+				SqlDataAdapter sda = new SqlDataAdapter(command);
+				DataTable dt = new DataTable();
+				sda.Fill(dt);
+				allList.DataSource = dt;
+			}
+			catch
+			{
+				MessageBox.Show($"{categoryName} ??\nData not found", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+			}
 		}
 	}
 }

@@ -62,7 +62,7 @@
 			this.panel1.Controls.Add(this.Exit);
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(1205, 32);
+			this.panel1.Size = new System.Drawing.Size(1263, 32);
 			this.panel1.TabIndex = 1;
 			// 
 			// label1
@@ -84,7 +84,7 @@
 			this.Minimize.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.Minimize.FlatAppearance.BorderSize = 0;
 			this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.Minimize.Location = new System.Drawing.Point(1140, 4);
+			this.Minimize.Location = new System.Drawing.Point(1203, 4);
 			this.Minimize.Name = "Minimize";
 			this.Minimize.Size = new System.Drawing.Size(24, 24);
 			this.Minimize.TabIndex = 9;
@@ -123,7 +123,7 @@
 			this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.Exit.FlatAppearance.BorderSize = 0;
 			this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.Exit.Location = new System.Drawing.Point(1174, 4);
+			this.Exit.Location = new System.Drawing.Point(1235, 4);
 			this.Exit.Name = "Exit";
 			this.Exit.Size = new System.Drawing.Size(24, 24);
 			this.Exit.TabIndex = 3;
@@ -179,7 +179,7 @@
 			this.guna2ShadowPanel1.Location = new System.Drawing.Point(0, 32);
 			this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
 			this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-			this.guna2ShadowPanel1.Size = new System.Drawing.Size(231, 628);
+			this.guna2ShadowPanel1.Size = new System.Drawing.Size(231, 693);
 			this.guna2ShadowPanel1.TabIndex = 3;
 			// 
 			// Customer
@@ -456,7 +456,7 @@
 			// 
 			this.panelContainer.Location = new System.Drawing.Point(231, 32);
 			this.panelContainer.Name = "panelContainer";
-			this.panelContainer.Size = new System.Drawing.Size(974, 628);
+			this.panelContainer.Size = new System.Drawing.Size(1032, 678);
 			this.panelContainer.TabIndex = 4;
 			this.panelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContainer_Paint);
 			// 
@@ -466,7 +466,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Moccasin;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.ClientSize = new System.Drawing.Size(1204, 660);
+			this.ClientSize = new System.Drawing.Size(1262, 710);
 			this.ControlBox = false;
 			this.Controls.Add(this.panelContainer);
 			this.Controls.Add(this.guna2ShadowPanel1);
