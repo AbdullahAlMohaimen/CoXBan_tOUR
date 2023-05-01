@@ -243,7 +243,8 @@ namespace CoXBan_tOUR.Admin.Add
 			
 			try
 			{
-				SqlCommand command = new SqlCommand("Select VehicleID as ID,VehicleName as Name,CategoryName as Category,VDistrict as District,VehicleTotalSeat as TotalSeat,VehicleRentPrice as RentPrice, VehicleStatus as Status from Vehicle v join Category c on v.CategoryID=c.CategoryID where VehicleName like '%" + searchText+ "%' or VDistrict like '%"+searchText+ "%' or VehicleStatus like '%"+searchText+ "%' or VehicleTotalSeat like '%"+(int)Convert.ToInt32(searchText)+ "%' or VehicleRentPrice like '%"+(float)Convert.ToDecimal(searchText)+"%'", conn);
+				//or VehicleTotalSeat like '%"+(int)Convert.ToInt32(searchText)+ "%' or VehicleRentPrice like '%"+(float)Convert.ToDecimal(searchText)+"%
+				SqlCommand command = new SqlCommand("Select VehicleID as ID,VehicleName as Name,CategoryName as Category,VDistrict as District,VehicleTotalSeat as TotalSeat,VehicleRentPrice as RentPrice, VehicleStatus as Status from Vehicle v join Category c on v.CategoryID=c.CategoryID where VehicleName like '%" + searchText+ "%' or VDistrict like '%"+searchText+ "%' or VehicleStatus like '%"+searchText+ "%'", conn);
 				SqlDataAdapter sda = new SqlDataAdapter(command);
 				DataTable dt = new DataTable();
 				sda.Fill(dt);

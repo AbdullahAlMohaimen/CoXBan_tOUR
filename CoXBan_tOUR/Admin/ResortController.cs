@@ -52,7 +52,10 @@ namespace CoXBan_tOUR.Admin.Add
 			conn.Open();
 			try
 			{
-				SqlCommand command = new SqlCommand("Select CategoryName from Category where CategoryName not like '%Bus%' and CategoryName not like '%Car%' and CategoryName not like '%Bike%' and  CategoryName not like '%Chander Gari%' and CategoryName not like '%Jeep%' and CategoryName not like '%Hiace%' and CategoryName not like '%Bicycle%'", conn);
+				SqlCommand command = new SqlCommand("Select CategoryName from Category where CategoryName not like '%Bus%' " +
+					"and CategoryName not like '%Car%' and CategoryName not like '%Bike%' and  CategoryName not like '%Chander Gari%'" +
+					" and CategoryName not like '%Jeep%' and CategoryName not like '%Hiace%' and" +
+					" CategoryName not like '%Bicycle%'", conn);
 				SqlDataReader dr = command.ExecuteReader();
 
 				while (dr.Read())
@@ -74,7 +77,9 @@ namespace CoXBan_tOUR.Admin.Add
 
 			try
 			{
-				SqlCommand command = new SqlCommand("Select ResortID as ID,ResortName as Name,CategoryName as Category,RDistrict as District,ResortTotalRoom as TotalRoom,ResortLocation as Location,ResortContactNumber as Number from Resort r join Category c on r.CategoryID=c.CategoryID", conn);
+				SqlCommand command = new SqlCommand("Select ResortID as ID,ResortName as Name,CategoryName as Category," +
+					"RDistrict as District,ResortTotalRoom as TotalRoom,ResortLocation as Location,ResortContactNumber" +
+					" as Number from Resort r join Category c on r.CategoryID=c.CategoryID", conn);
 				SqlDataAdapter sda = new SqlDataAdapter(command);
 				DataTable resortTable = new DataTable();
 				sda.Fill(resortTable);
@@ -99,7 +104,8 @@ namespace CoXBan_tOUR.Admin.Add
 
 			try
 			{
-				SqlCommand command = new SqlCommand("Select CategoryID from Category where CategoryName='" + categoryName + "'", conn);
+				SqlCommand command = new SqlCommand("Select CategoryID from Category where " +
+					"CategoryName='" + categoryName + "'", conn);
 				SqlDataReader dr=command.ExecuteReader();
 				if(dr.Read())
 				{
@@ -131,7 +137,11 @@ namespace CoXBan_tOUR.Admin.Add
 						{
 							try
 							{
-								SqlCommand insertCommand = new SqlCommand("Insert into Resort(CategoryID,ResortName,RDistrict,ResortLocation,ResortTotalRoom,ResortQuality,ResortDescription,ResortContactNumber,ResortImage) values('"+ categoryID + "','"+ resortName + "','"+ resortDistrict + "','"+resortLocation+"','"+ resortTotalRoom + "','"+ resortQuality + "','"+resortDescription+"','"+resortContactNumber+"','"+rImage+"')", conn, resortInsertTransaction);
+								SqlCommand insertCommand = new SqlCommand("Insert into Resort(CategoryID,ResortName,RDistrict," +
+									"ResortLocation,ResortTotalRoom,ResortQuality,ResortDescription,ResortContactNumber,ResortImage) " +
+									"values('"+ categoryID + "','"+ resortName + "','"+ resortDistrict + "','"+resortLocation+"'," +
+									"'"+ resortTotalRoom + "','"+ resortQuality + "','"+resortDescription+"','"+resortContactNumber+"'," +
+									"'"+rImage+"')", conn, resortInsertTransaction);
 								insertCommand.ExecuteNonQuery();
 								resortInsertTransaction.Commit();
 
@@ -190,7 +200,12 @@ namespace CoXBan_tOUR.Admin.Add
 
 			try
 			{
-				SqlCommand command = new SqlCommand("Select ResortID as ID,ResortName as Name,CategoryName as Category,RDistrict as District,ResortTotalRoom as TotalRoom,ResortLocation as Location,ResortContactNumber as Number from Resort r join Category c on r.CategoryID=c.CategoryID where ResortName like '%" + searchText + "%' or RDistrict like '%" + searchText + "%' or ResortLocation like '%" + searchText + "%' or ResortQuality like '%" + searchText + "%' or ResortContactNumber like '%" + searchText + "%'", conn);
+				SqlCommand command = new SqlCommand("Select ResortID as ID,ResortName as Name," +
+					"CategoryName as Category,RDistrict as District,ResortTotalRoom as TotalRoom,ResortLocation as Location," +
+					"ResortContactNumber as Number from Resort r join Category c on r.CategoryID=c.CategoryID " +
+					"where ResortName like '%" + searchText + "%' or RDistrict like '%" + searchText + "%'" +
+					" or ResortLocation like '%" + searchText + "%' or ResortQuality like '%" + searchText + "%'" +
+					" or ResortContactNumber like '%" + searchText + "%'", conn);
 				SqlDataAdapter sda = new SqlDataAdapter(command);
 				DataTable dt = new DataTable();
 				sda.Fill(dt);
@@ -215,7 +230,10 @@ namespace CoXBan_tOUR.Admin.Add
 
 			try
 			{
-				SqlCommand command = new SqlCommand("Select ResortID as ID,ResortName as Name,CategoryName as Category,RDistrict as District,ResortTotalRoom as TotalRoom,ResortLocation as Location,ResortContactNumber as Number from Resort r join Category c on r.CategoryID=c.CategoryID where CategoryName='" + categoryName +"'", conn);
+				SqlCommand command = new SqlCommand("Select ResortID as ID,ResortName as Name,CategoryName" +
+					" as Category,RDistrict as District,ResortTotalRoom as TotalRoom,ResortLocation as Location," +
+					"ResortContactNumber as Number from Resort r join Category c on r.CategoryID=c.CategoryID where " +
+					"CategoryName='" + categoryName +"'", conn);
 				SqlDataAdapter sda = new SqlDataAdapter(command);
 				DataTable dt = new DataTable();
 				sda.Fill(dt);
@@ -241,7 +259,12 @@ namespace CoXBan_tOUR.Admin.Add
 
 			try
 			{
-				SqlCommand command = new SqlCommand("Select ResortID as ID,ResortName as Name,CategoryName as Category,RDistrict as District,ResortTotalRoom as TotalRoom,ResortLocation as Location,ResortContactNumber as Number from Resort r join Category c on r.CategoryID=c.CategoryID where ResortName like '%" + searchText + "%' or RDistrict like '%" + searchText + "%' or ResortLocation like '%" + searchText + "%' or ResortQuality like '%" + searchText + "%' or ResortContactNumber like '%" + searchText + "%'", conn);
+				SqlCommand command = new SqlCommand("Select ResortID as ID,ResortName as Name,CategoryName as " +
+					"Category,RDistrict as District,ResortTotalRoom as TotalRoom,ResortLocation as Location," +
+					"ResortContactNumber as Number from Resort r join Category c on r.CategoryID=c.CategoryID" +
+					" where ResortName like '%" + searchText + "%' or RDistrict like '%" + searchText + "%' or" +
+					" ResortLocation like '%" + searchText + "%' or ResortQuality like '%" + searchText + "%' or" +
+					" ResortContactNumber like '%" + searchText + "%'", conn);
 				SqlDataAdapter sda = new SqlDataAdapter(command);
 				DataTable dt = new DataTable();
 				sda.Fill(dt);
