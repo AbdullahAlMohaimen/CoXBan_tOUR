@@ -28,9 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel2 = new System.Windows.Forms.Panel();
@@ -124,30 +124,30 @@
 			// 
 			// allTouristPlaceList
 			// 
-			dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-			this.allTouristPlaceList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+			this.allTouristPlaceList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
 			this.allTouristPlaceList.BackgroundColor = System.Drawing.Color.Moccasin;
 			this.allTouristPlaceList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.allTouristPlaceList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
-			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Moccasin;
-			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.allTouristPlaceList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Moccasin;
+			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.allTouristPlaceList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
 			this.allTouristPlaceList.ColumnHeadersHeight = 28;
 			this.allTouristPlaceList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
 			this.allTouristPlaceList.Cursor = System.Windows.Forms.Cursors.Hand;
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Tai Le", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.CadetBlue;
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.allTouristPlaceList.DefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Tai Le", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.CadetBlue;
+			dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.allTouristPlaceList.DefaultCellStyle = dataGridViewCellStyle9;
 			this.allTouristPlaceList.EnableHeadersVisualStyles = true;
 			this.allTouristPlaceList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
 			this.allTouristPlaceList.Location = new System.Drawing.Point(24, 328);
@@ -226,70 +226,70 @@
 			this.resortcategory.ItemHeight = 28;
 			this.resortcategory.Items.AddRange(new object[] {
             "Choose District",
-            "Dhaka",
-            "Faridpur",
-            "Gazipur",
-            "Gopalganj",
-            "Jamalpur",
-            "Kishoreganj",
-            "Madaripur",
-            "Manikganj",
-            "Munshiganj",
-            "Mymensingh",
-            "Narayanganj",
-            "Narsingdi",
-            "Netrokona",
-            "Rajbari",
-            "Shariatpur",
-            "Sherpur",
-            "Tangail",
-            "Bogra",
-            "Joypurhat",
-            "Naogaon",
-            "Natore",
-            "Nawabganj",
-            "Pabna ",
-            "Rajshahi",
-            "Sirajgonj",
-            "Dinajpur",
-            "Gaibandha",
-            "Kurigram",
-            "Lalmonirhat",
-            "Nilphamari",
-            "Panchagarh",
-            "Rangpur",
-            "Thakurgaon",
+            "Bagerhat",
+            "Bandarban",
             "Barguna",
             "Barisal",
             "Bhola",
-            "Jhalokati",
-            "Patuakhali",
-            "Pirojpur",
-            "Bandarban",
+            "Bogra",
             "Brahmanbaria",
             "Chandpur",
             "Chittagong",
+            "Chuadanga",
             "Comilla",
             "Cox\'\'s Bazar",
+            "Dhaka",
+            "Dinajpur",
+            "Faridpur",
             "Feni",
-            "Khagrachari",
-            "Lakshmipur",
-            "Noakhali",
-            "Rangamati",
+            "Gaibandha",
+            "Gazipur",
+            "Gopalganj",
             "Habiganj",
-            "Maulvibazar",
-            "Sunamganj",
-            "Sylhet ",
-            "Bagerhat",
-            "Chuadanga",
+            "Jamalpur",
             "Jessore",
             "Jhenaidah",
+            "Jhalokati",
+            "Joypurhat",
+            "Khagrachari",
             "Khulna",
             "Kushtia",
+            "Kishoreganj",
+            "Kurigram",
+            "Lakshmipur",
+            "Lalmonirhat",
+            "Madaripur",
             "Magura",
+            "Manikganj",
+            "Maulvibazar",
             "Meherpur",
+            "Munshiganj",
+            "Mymensingh",
+            "Naogaon",
+            "Narayanganj",
+            "Natore",
             "Narail",
-            "Satkhira"});
+            "Narsingdi",
+            "Nawabganj",
+            "Netrokona",
+            "Nilphamari",
+            "Noakhali",
+            "Pabna ",
+            "Panchagarh",
+            "Patuakhali",
+            "Pirojpur",
+            "Rangamati",
+            "Rajbari",
+            "Rajshahi",
+            "Rangpur",
+            "Satkhira",
+            "Shariatpur",
+            "Sherpur",
+            "Sirajgonj",
+            "Sunamganj",
+            "Sylhet ",
+            "Tangail",
+            "Thakurgaon"});
 			this.resortcategory.Location = new System.Drawing.Point(565, 287);
 			this.resortcategory.MaxDropDownItems = 5;
 			this.resortcategory.Name = "resortcategory";
