@@ -28,9 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel2 = new System.Windows.Forms.Panel();
@@ -523,43 +523,43 @@
 			this.txt_VehicleSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_VehicleSearch.ForeColor = System.Drawing.Color.Black;
 			this.txt_VehicleSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-			this.txt_VehicleSearch.Location = new System.Drawing.Point(792, 285);
+			this.txt_VehicleSearch.Location = new System.Drawing.Point(754, 285);
 			this.txt_VehicleSearch.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
 			this.txt_VehicleSearch.Name = "txt_VehicleSearch";
 			this.txt_VehicleSearch.PasswordChar = '\0';
 			this.txt_VehicleSearch.PlaceholderText = "";
 			this.txt_VehicleSearch.SelectedText = "";
-			this.txt_VehicleSearch.Size = new System.Drawing.Size(162, 36);
+			this.txt_VehicleSearch.Size = new System.Drawing.Size(200, 36);
 			this.txt_VehicleSearch.TabIndex = 67;
 			this.txt_VehicleSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.txt_VehicleSearch.TextChanged += new System.EventHandler(this.txt_VehicleSearch_TextChanged);
 			// 
 			// allResortList
 			// 
-			dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-			this.allResortList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+			this.allResortList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.allResortList.BackgroundColor = System.Drawing.Color.Moccasin;
 			this.allResortList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.allResortList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
-			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Moccasin;
-			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.allResortList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Moccasin;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.allResortList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.allResortList.ColumnHeadersHeight = 28;
 			this.allResortList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
 			this.allResortList.Cursor = System.Windows.Forms.Cursors.Hand;
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Tai Le", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.CadetBlue;
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.allResortList.DefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Tai Le", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.CadetBlue;
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.allResortList.DefaultCellStyle = dataGridViewCellStyle3;
 			this.allResortList.EnableHeadersVisualStyles = true;
 			this.allResortList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
 			this.allResortList.Location = new System.Drawing.Point(24, 328);
@@ -616,7 +616,7 @@
 			this.resortcategory.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 			this.resortcategory.IntegralHeight = false;
 			this.resortcategory.ItemHeight = 28;
-			this.resortcategory.Location = new System.Drawing.Point(565, 287);
+			this.resortcategory.Location = new System.Drawing.Point(520, 287);
 			this.resortcategory.MaxDropDownItems = 5;
 			this.resortcategory.Name = "resortcategory";
 			this.resortcategory.ShadowDecoration.Color = System.Drawing.Color.Gray;

@@ -38,7 +38,7 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.allTouristPlaceList = new Guna.UI2.WinForms.Guna2DataGridView();
 			this.touristPlaceLoading = new Guna.UI2.WinForms.Guna2CircleButton();
-			this.resortcategory = new Guna.UI2.WinForms.Guna2ComboBox();
+			this.touristPlaceDistrict = new Guna.UI2.WinForms.Guna2ComboBox();
 			this.txt_TouristPlaceSearch = new Guna.UI2.WinForms.Guna2TextBox();
 			this.touristPlaceSearch = new Guna.UI2.WinForms.Guna2CircleButton();
 			this.label2 = new System.Windows.Forms.Label();
@@ -201,30 +201,31 @@
 			this.touristPlaceLoading.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
 			this.touristPlaceLoading.Size = new System.Drawing.Size(37, 30);
 			this.touristPlaceLoading.TabIndex = 72;
+			this.touristPlaceLoading.Click += new System.EventHandler(this.touristPlaceLoading_Click);
 			// 
-			// resortcategory
+			// touristPlaceDistrict
 			// 
-			this.resortcategory.BackColor = System.Drawing.Color.Moccasin;
-			this.resortcategory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.resortcategory.BorderRadius = 8;
-			this.resortcategory.BorderThickness = 0;
-			this.resortcategory.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.resortcategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-			this.resortcategory.DropDownHeight = 150;
-			this.resortcategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.resortcategory.DropDownWidth = 120;
-			this.resortcategory.FillColor = System.Drawing.Color.Moccasin;
-			this.resortcategory.FocusedColor = System.Drawing.Color.Empty;
-			this.resortcategory.FocusedState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.resortcategory.FocusedState.ForeColor = System.Drawing.Color.Black;
-			this.resortcategory.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.resortcategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.resortcategory.HoverState.FillColor = System.Drawing.Color.Brown;
-			this.resortcategory.HoverState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
-			this.resortcategory.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.resortcategory.IntegralHeight = false;
-			this.resortcategory.ItemHeight = 28;
-			this.resortcategory.Items.AddRange(new object[] {
+			this.touristPlaceDistrict.BackColor = System.Drawing.Color.Moccasin;
+			this.touristPlaceDistrict.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.touristPlaceDistrict.BorderRadius = 8;
+			this.touristPlaceDistrict.BorderThickness = 0;
+			this.touristPlaceDistrict.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.touristPlaceDistrict.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.touristPlaceDistrict.DropDownHeight = 150;
+			this.touristPlaceDistrict.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.touristPlaceDistrict.DropDownWidth = 120;
+			this.touristPlaceDistrict.FillColor = System.Drawing.Color.Moccasin;
+			this.touristPlaceDistrict.FocusedColor = System.Drawing.Color.Empty;
+			this.touristPlaceDistrict.FocusedState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.touristPlaceDistrict.FocusedState.ForeColor = System.Drawing.Color.Black;
+			this.touristPlaceDistrict.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.touristPlaceDistrict.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.touristPlaceDistrict.HoverState.FillColor = System.Drawing.Color.Brown;
+			this.touristPlaceDistrict.HoverState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
+			this.touristPlaceDistrict.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.touristPlaceDistrict.IntegralHeight = false;
+			this.touristPlaceDistrict.ItemHeight = 28;
+			this.touristPlaceDistrict.Items.AddRange(new object[] {
             "Choose District",
             "Bagerhat",
             "Bandarban",
@@ -290,13 +291,14 @@
             "Sylhet ",
             "Tangail",
             "Thakurgaon"});
-			this.resortcategory.Location = new System.Drawing.Point(565, 287);
-			this.resortcategory.MaxDropDownItems = 5;
-			this.resortcategory.Name = "resortcategory";
-			this.resortcategory.ShadowDecoration.Color = System.Drawing.Color.Gray;
-			this.resortcategory.Size = new System.Drawing.Size(219, 34);
-			this.resortcategory.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-			this.resortcategory.TabIndex = 73;
+			this.touristPlaceDistrict.Location = new System.Drawing.Point(520, 287);
+			this.touristPlaceDistrict.MaxDropDownItems = 5;
+			this.touristPlaceDistrict.Name = "touristPlaceDistrict";
+			this.touristPlaceDistrict.ShadowDecoration.Color = System.Drawing.Color.Gray;
+			this.touristPlaceDistrict.Size = new System.Drawing.Size(219, 34);
+			this.touristPlaceDistrict.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+			this.touristPlaceDistrict.TabIndex = 73;
+			this.touristPlaceDistrict.SelectedIndexChanged += new System.EventHandler(this.resortcategory_SelectedIndexChanged);
 			// 
 			// txt_TouristPlaceSearch
 			// 
@@ -315,15 +317,16 @@
 			this.txt_TouristPlaceSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_TouristPlaceSearch.ForeColor = System.Drawing.Color.Black;
 			this.txt_TouristPlaceSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-			this.txt_TouristPlaceSearch.Location = new System.Drawing.Point(792, 285);
+			this.txt_TouristPlaceSearch.Location = new System.Drawing.Point(754, 285);
 			this.txt_TouristPlaceSearch.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
 			this.txt_TouristPlaceSearch.Name = "txt_TouristPlaceSearch";
 			this.txt_TouristPlaceSearch.PasswordChar = '\0';
 			this.txt_TouristPlaceSearch.PlaceholderText = "";
 			this.txt_TouristPlaceSearch.SelectedText = "";
-			this.txt_TouristPlaceSearch.Size = new System.Drawing.Size(162, 36);
+			this.txt_TouristPlaceSearch.Size = new System.Drawing.Size(200, 36);
 			this.txt_TouristPlaceSearch.TabIndex = 74;
 			this.txt_TouristPlaceSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.txt_TouristPlaceSearch.TextChanged += new System.EventHandler(this.txt_TouristPlaceSearch_TextChanged);
 			// 
 			// touristPlaceSearch
 			// 
@@ -344,6 +347,7 @@
 			this.touristPlaceSearch.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
 			this.touristPlaceSearch.Size = new System.Drawing.Size(37, 30);
 			this.touristPlaceSearch.TabIndex = 75;
+			this.touristPlaceSearch.Click += new System.EventHandler(this.touristPlaceSearch_Click);
 			// 
 			// label2
 			// 
@@ -684,7 +688,7 @@
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.touristPlaceSearch);
 			this.Controls.Add(this.txt_TouristPlaceSearch);
-			this.Controls.Add(this.resortcategory);
+			this.Controls.Add(this.touristPlaceDistrict);
 			this.Controls.Add(this.touristPlaceLoading);
 			this.Controls.Add(this.allTouristPlaceList);
 			this.Controls.Add(this.txt_TouristPlaceName);
@@ -712,7 +716,7 @@
 		private System.Windows.Forms.Label label4;
 		private Guna.UI2.WinForms.Guna2DataGridView allTouristPlaceList;
 		private Guna.UI2.WinForms.Guna2CircleButton touristPlaceLoading;
-		private Guna.UI2.WinForms.Guna2ComboBox resortcategory;
+		private Guna.UI2.WinForms.Guna2ComboBox touristPlaceDistrict;
 		private Guna.UI2.WinForms.Guna2TextBox txt_TouristPlaceSearch;
 		private Guna.UI2.WinForms.Guna2CircleButton touristPlaceSearch;
 		private System.Windows.Forms.Label label2;

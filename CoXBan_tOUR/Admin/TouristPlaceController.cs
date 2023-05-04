@@ -39,6 +39,10 @@ namespace CoXBan_tOUR.Admin.Add
 			{
 				MessageBox.Show("Something Problem.....!\nData loaded failed","Error",MessageBoxButtons.OK,MessageBoxIcon.Information);
 			}
+			finally
+			{ 
+				conn.Close(); 
+			}
 		}
 		private void touristPlaceImage1_Click(object sender, EventArgs e)
 		{
@@ -121,6 +125,7 @@ namespace CoXBan_tOUR.Admin.Add
 							touristPlaceInsertTransaction.Commit();
 
 							MessageBox.Show("Successfully Inserted", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
+							getAllTouristPlace();
 							txt_TouristPlaceName.Clear();
 							txt_TouristPlaceThana.Clear();
 							txt_TouristPlaceLocation.Clear();
@@ -140,6 +145,113 @@ namespace CoXBan_tOUR.Admin.Add
 			catch
 			{
 				MessageBox.Show("Something Problem....!!\nPlease try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			finally
+			{
+				conn.Close();
+			}
+		}
+
+		private void resortcategory_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			SqlConnection conn = new SqlConnection(connectionString);
+			conn.Open();
+
+			string district = touristPlaceDistrict.SelectedItem.ToString();
+
+			try
+			{
+				SqlCommand command = new SqlCommand("select TouristPlaceNo as No, TouristPlaceName as Place," +
+					"TouristPlaceDistrict as District,TouristPlaceThana as Thana,TouristPlaceRating as Rating " +
+					"from TouristPlace where TouristPlaceDistrict='"+ district + "'", conn);
+				SqlDataAdapter sda = new SqlDataAdapter(command);
+				DataTable touristPlaceTable = new DataTable();
+				sda.Fill(touristPlaceTable);
+				allTouristPlaceList.DataSource = touristPlaceTable;
+			}
+			catch
+			{
+				MessageBox.Show("Search Data Not Found","Data Not Found",MessageBoxButtons.OKCancel,MessageBoxIcon.Error);
+			}
+			finally
+			{
+				conn.Close();
+			}
+		}
+
+		private void touristPlaceLoading_Click(object sender, EventArgs e)
+		{
+			SqlConnection conn = new SqlConnection(connectionString);
+			conn.Open();
+
+			try
+			{
+				SqlCommand command = new SqlCommand("select TouristPlaceNo as No, TouristPlaceName as Place,TouristPlaceDistrict as" +
+					" District,TouristPlaceThana as Thana,TouristPlaceRating as Rating from TouristPlace", conn);
+				SqlDataAdapter sda = new SqlDataAdapter(command);
+				DataTable touristPlaceTable = new DataTable();
+				sda.Fill(touristPlaceTable);
+				allTouristPlaceList.DataSource = touristPlaceTable;
+			}
+			catch
+			{
+				MessageBox.Show("Something Problem.....!\nData loaded failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
+			finally
+			{
+				conn.Close();
+			}
+		}
+
+		private void txt_TouristPlaceSearch_TextChanged(object sender, EventArgs e)
+		{
+			SqlConnection conn = new SqlConnection(connectionString);
+			conn.Open();
+
+			string searchText = txt_TouristPlaceSearch.Text;
+
+			try
+			{
+				SqlCommand command = new SqlCommand("select TouristPlaceNo as No, TouristPlaceName as Place," +
+					"TouristPlaceDistrict as District,TouristPlaceThana as Thana,TouristPlaceRating as Rating " +
+					"from TouristPlace where TouristPlaceNo like '%"+searchText+ "%' or  TouristPlaceName like " +
+					"'%"+ searchText + "%' or TouristPlaceThana like '%"+ searchText + "%'", conn);
+				SqlDataAdapter sda = new SqlDataAdapter(command);
+				DataTable touristPlaceTable = new DataTable();
+				sda.Fill(touristPlaceTable);
+				allTouristPlaceList.DataSource = touristPlaceTable;
+			}
+			catch
+			{
+				MessageBox.Show("Search Data Not Found", "Data Not Found", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+			}
+			finally
+			{
+				conn.Close();
+			}
+		}
+
+		private void touristPlaceSearch_Click(object sender, EventArgs e)
+		{
+			SqlConnection conn = new SqlConnection(connectionString);
+			conn.Open();
+
+			string searchText = txt_TouristPlaceSearch.Text;
+
+			try
+			{
+				SqlCommand command = new SqlCommand("select TouristPlaceNo as No, TouristPlaceName as Place," +
+					"TouristPlaceDistrict as District,TouristPlaceThana as Thana,TouristPlaceRating as Rating " +
+					"from TouristPlace where TouristPlaceNo like '%" + searchText + "%' or  TouristPlaceName like " +
+					"'%" + searchText + "%' or TouristPlaceThana like '%" + searchText + "%'", conn);
+				SqlDataAdapter sda = new SqlDataAdapter(command);
+				DataTable touristPlaceTable = new DataTable();
+				sda.Fill(touristPlaceTable);
+				allTouristPlaceList.DataSource = touristPlaceTable;
+			}
+			catch
+			{
+				MessageBox.Show("Search Data Not Found", "Data Not Found", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
 			}
 			finally
 			{
