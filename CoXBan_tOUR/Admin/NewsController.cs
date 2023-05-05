@@ -162,6 +162,7 @@ namespace CoXBan_tOUR.Admin.Add
 
 								MessageBox.Show("Successfully Inserted", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
 								conn.Close();
+
 							}
 							catch
 							{
