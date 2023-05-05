@@ -21,11 +21,11 @@ namespace CoXBan_tOUR
 		{
 			InitializeComponent();
 
-			//HomeController homeController = new HomeController();
-			//AddUserControl(homeController);
+			HomeController homeController = new HomeController();
+			AddUserControl(homeController);
 
-			CategoryController categoryController = new CategoryController();
-			AddUserControl(categoryController);
+			//CategoryController categoryController = new CategoryController();
+			//AddUserControl(categoryController);
 		}
 
 
@@ -48,7 +48,7 @@ namespace CoXBan_tOUR
 		private void AdminPage_Load(object sender, EventArgs e)
 		{
 			DateTime dateTime = DateTime.UtcNow.Date;
-			txt_Date.Text = dateTime.ToString("dd - MM - yyyy");
+			txt_Date.Text = dateTime.ToString("dd  MMM  yyyy");
 
 
 			SqlConnection conn = new SqlConnection(connectionString);
@@ -142,6 +142,7 @@ namespace CoXBan_tOUR
 		private void News_Click(object sender, EventArgs e)
 		{
 			NewsController newsController = new NewsController();
+			newsController.SetEmail = AdminEmail;
 			AddUserControl(newsController);
 		}
 

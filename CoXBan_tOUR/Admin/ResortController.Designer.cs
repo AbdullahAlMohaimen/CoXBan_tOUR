@@ -428,7 +428,7 @@
 			// 
 			this.resortImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.resortImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.resortImage.Location = new System.Drawing.Point(825, 146);
+			this.resortImage.Location = new System.Drawing.Point(828, 146);
 			this.resortImage.Name = "resortImage";
 			this.resortImage.Size = new System.Drawing.Size(124, 124);
 			this.resortImage.TabIndex = 63;
